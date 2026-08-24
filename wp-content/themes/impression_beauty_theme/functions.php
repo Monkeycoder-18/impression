@@ -50,7 +50,7 @@ function impression_beauty_enqueue_assets() {
         'impression-main',
         get_template_directory_uri() . '/assets/css/main.css',
         [ 'bootstrap' ],
-        '1.0.0'
+        filemtime( get_template_directory() . '/assets/css/main.css' )
     );
 
     // Bootstrap 5.3.3 JS bundle (footer)
