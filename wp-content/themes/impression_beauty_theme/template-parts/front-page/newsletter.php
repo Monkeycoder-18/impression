@@ -1,5 +1,5 @@
 <!-- NEWSLETTER -->
-<section class="py-5">
+<section class="py-5 section-bg-white pt-5">
     <div class="container">
         <div class="newsletter text-center">
 

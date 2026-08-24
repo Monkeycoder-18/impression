@@ -4,7 +4,7 @@ $services = get_field('services-repeater');
 ?>
 
 <!-- SERVICES -->
-<section class="py-5 my-5">
+<section class="py-5 section-bg-white">
     <div class="container">
 
         <div class="section-title">

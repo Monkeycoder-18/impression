@@ -11,7 +11,7 @@ $news_query = new WP_Query([
 ?>
 
 <!-- NEWS -->
-<section class="news-section py-5 my-5">
+<section class="news-section py-5">
     <div class="container">
 
         <div class="section-title">

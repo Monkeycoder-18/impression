@@ -1,5 +1,5 @@
 <!-- PROMOTIONAL & PRICING -->
-<section class="py-5 my-5">
+<section class="py-5 section-bg-white">
     <div class="container">
         <div class="trend-box">
             <div class="row g-0 align-items-center" style="padding-left: 35px">

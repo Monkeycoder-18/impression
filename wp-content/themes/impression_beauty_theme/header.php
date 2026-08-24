@@ -15,7 +15,11 @@
     <div class="container">
 
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <!-- <?php bloginfo( 'name' ); ?> -->
+            <img
+                src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
+                alt="<?php bloginfo( 'name' ); ?>"
+                class="navbar-logo"
+            >
         </a>
 
         <button class="navbar-toggler" type="button"
