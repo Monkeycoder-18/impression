@@ -135,7 +135,7 @@ add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args, $depth ) 
     } else {
         $atts['class'] = 'dropdown-item';
     }
-
+ 
     return $atts;
 }, 10, 4 );
 
