@@ -161,6 +161,14 @@ function impression_beauty_footer_fallback() {
 }
 
 
+// ──────────────────────────────────────────────
+// Increase Maximum Upload Size to 256 MB
+// ──────────────────────────────────────────────
+add_filter( 'upload_size_limit', function() {
+    return 256 * MB_IN_BYTES;
+} );
+
+
 add_action('init', 'register_my_acf_blocks');
 function register_my_acf_blocks()
 {
