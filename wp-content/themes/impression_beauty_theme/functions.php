@@ -174,3 +174,4 @@ function register_my_acf_blocks()
 {
     register_block_type(__DIR__ . '/blocks/about-hero');
 }
+
