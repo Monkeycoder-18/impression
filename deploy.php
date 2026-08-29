@@ -27,9 +27,15 @@ $payloadHash = hash_hmac($algo, $payload, $secret);
 
 // Verify signature matching
 if ($hash === $payloadHash) {
-    // Run the git pull command on the current folder directory
+    // 1. Pull the latest code updates from GitHub
     exec('cd ' . __DIR__ . ' && git pull 2>&1', $output);
-    echo "Success:\n" . implode("\n", $output);
+
+    // 2. Force cPanel to deploy the files using your .cpanel.yml instructions
+    exec('/usr/local/cpanel/bin/git-deploy 2>&1', $deploy_output);
+
+    // Format the response log clearly for your GitHub panel
+    echo "=== Git Pull Log ===\n" . implode("\n", $output) . "\n\n";
+    echo "=== cPanel Deployment Log ===\n" . implode("\n", $deploy_output);
 } else {
     header('HTTP/1.1 403 Forbidden');
     echo "Access Denied.";
