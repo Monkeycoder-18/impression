@@ -1,0 +1,21 @@
+name: Trigger cPanel .cpanel.yml Deploy
+
+on:
+  push:
+    branches:
+      - main  # Change this to master if your primary branch is called master
+
+jobs:
+  cpanel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Wake up cPanel Deployment Engine
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ://impressionbeauty.com
+        username: impress5
+        key: ${{ secrets.SSH_PRIVATE_KEY_IMPRESSION }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE_IMPRESSION }}
+        port: 22  # Change this if your hosting provider uses a custom SSH port
+        script: |
+          /usr/local/cpanel/bin/git-deploy
