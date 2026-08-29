@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/impress5/://new.site.impressionbeauty.com
-    - /bin/cp -R * $DEPLOYPATH
