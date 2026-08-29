@@ -5,9 +5,13 @@
         <div class="row g-4">
 
             <div class="col-lg-4">
-                <h4 class="navbar-brand" style="color:var(--primary)">
-                    <?php bloginfo( 'name' ); ?>
-                </h4>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img
+                        src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
+                        alt="<?php bloginfo( 'name' ); ?>"
+                        class="navbar-logo"
+                    >
+                </a>
                 <p class="text-muted mt-3 footer-tagline">
                     <?php bloginfo( 'description' ); ?>
                 </p>
