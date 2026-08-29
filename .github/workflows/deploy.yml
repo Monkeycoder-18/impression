@@ -16,6 +16,6 @@ jobs:
         username: impress5
         key: ${{ secrets.SSH_PRIVATE_KEY_IMPRESSION }}
         passphrase: ${{ secrets.SSH_PASSPHRASE_IMPRESSION }}
-        port: 22  # Change this if your hosting provider uses a custom SSH port
+        port: 8288  # Change this if your hosting provider uses a custom SSH port
         script: |
           /usr/local/cpanel/bin/git-deploy
