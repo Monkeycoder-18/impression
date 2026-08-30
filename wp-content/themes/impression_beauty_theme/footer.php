@@ -11,9 +11,9 @@
                         alt="<?php bloginfo('name'); ?>"
                         class="navbar-logo">
                 </a>
-                <p class="text-muted mt-3 footer-tagline">
-                    <?php bloginfo('description'); ?>
-                </p>
+                <!-- <p class="text-muted mt-3 footer-tagline">
+                    <?php //bloginfo('description'); ?>
+                </p> -->
             </div>
 
             <!-- <div class="col-lg-2">
