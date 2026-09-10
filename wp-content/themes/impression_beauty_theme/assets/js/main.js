@@ -6,9 +6,10 @@
     if (!nav) return;
 
     const THRESHOLD = 80;
+    const forceScrolled = document.body.classList.contains('force-nav-scrolled');
 
     function updateNav() {
-        if (window.scrollY > THRESHOLD) {
+        if (forceScrolled || window.scrollY > THRESHOLD) {
             nav.classList.add('nav-scrolled');
         } else {
             nav.classList.remove('nav-scrolled');

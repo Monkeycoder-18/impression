@@ -175,3 +175,15 @@ function register_my_acf_blocks()
     register_block_type(__DIR__ . '/blocks/about-hero');
 }
 
+
+// ──────────────────────────────────────────────
+// Force the navbar's "scrolled" (solid) look on pages whose
+// hero background clashes with the transparent logo/nav.
+// ──────────────────────────────────────────────
+add_filter( 'body_class', function( $classes ) {
+    if ( is_page_template( 'template-contact-page.php' ) ) {
+        $classes[] = 'force-nav-scrolled';
+    }
+    return $classes;
+} );
+

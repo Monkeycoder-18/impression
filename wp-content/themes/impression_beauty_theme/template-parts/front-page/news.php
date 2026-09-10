@@ -15,8 +15,8 @@ $news_query = new WP_Query([
     <div class="container">
 
         <div class="section-title">
-            <h2>Latest News</h2>
-            <p>Stay in the loop with beauty tips, skincare insights, and the latest trends from Impression Beauty.</p>
+            <h2>Latest Updates</h2>
+            <p>Check out our latest promos, pricing changes, and other updates from Impression Beauty.</p>
         </div>
 
         <?php if ($news_query->have_posts()) : ?>

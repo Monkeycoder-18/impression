@@ -42,6 +42,14 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: 'Pretendard', 'Inter', sans-serif !important;
     font-weight: 300 !important;
+    text-wrap: balance;
+}
+
+/* Safety net: prevent single/short words from being orphaned onto
+   their own line at the end of a paragraph (e.g. "...and Live\nWell.").
+   Falls back to normal wrapping in browsers that don't support it yet. */
+p, li {
+    text-wrap: pretty;
 }
 
 .navbar {
@@ -155,7 +163,7 @@ h1, h2, h3, h4, h5 {
 
 .hero h1 {
     font-family: 'Pretendard', 'Inter', sans-serif;
-    font-size: 4rem;
+    font-size: clamp(4rem, 2.6vw + 1.6rem, 5.5rem);
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -163,16 +171,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero span {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 1.4vw + 1.2rem, 3.4rem);
     color: var(--secondary);
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 0.35vw + 0.9rem, 1.4rem);
     color: var(--text-secondary);
     margin-bottom: 30px;
     animation: heroFadeUp 0.8s ease both;
     animation-delay: 0.3s;
+    text-wrap: pretty;
 }
 
 .hero-img {
@@ -290,6 +299,21 @@ h1, h2, h3, h4, h5 {
         left: -16px;
         bottom: 28px;
         padding: 10px 16px;
+    }
+}
+
+/* On large desktop monitors (1080p, 1440p, etc.) Bootstrap's default
+   .container caps out at 1320px, leaving a lot of dead space on either
+   side. Let the hero container/image grow fluidly with the viewport
+   instead of staying pinned to that cap. Values stay at the Bootstrap
+   default at the 1400px breakpoint, then scale up smoothly. */
+@media (min-width: 1400px) {
+    .hero .container {
+        max-width: clamp(1320px, 78vw, 1800px);
+    }
+
+    .hero-slider {
+        max-height: clamp(650px, 40vw, 850px);
     }
 }
 
@@ -684,10 +708,58 @@ h1, h2, h3, h4, h5 {
 
 /* NEWSLETTER */
 .newsletter {
-    background: var(--primary);
+    position: relative;
+    overflow: hidden;
+    background: transparent;
     border-radius: 30px;
     padding: 60px;
-    color: #fff;
+    color: inherit;
+}
+
+.google-reviews-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto 38px;
+}
+
+.google-reviews-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--palette-honey);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.google-reviews-stars {
+    margin-bottom: 12px;
+    color: var(--palette-honey);
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.google-reviews-heading h2 {
+    margin-bottom: 12px;
+    color: var(--palette-espresso);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.google-reviews-heading p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.google-reviews-widget {
+    position: relative;
+    z-index: 1;
+    padding: 24px;
 }
 
 .newsletter input {
@@ -869,6 +941,14 @@ footer ul li a:hover {
         padding: 40px 25px;
     }
 
+    .google-reviews-heading {
+        margin-bottom: 28px;
+    }
+
+    .google-reviews-widget {
+        padding: 18px;
+    }
+
     .testimonials-circles {
         gap: 40px;
     }
@@ -883,6 +963,20 @@ footer ul li a:hover {
 }
 
 @media (max-width: 600px) {
+    .newsletter {
+        padding: 34px 16px 16px;
+        border-radius: 24px;
+    }
+
+    .google-reviews-heading p {
+        font-size: 0.95rem;
+    }
+
+    .google-reviews-widget {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
     .testimonials-circles {
         flex-direction: column;
         align-items: center;
@@ -1210,6 +1304,38 @@ footer ul li a:hover {
 .inner-page-hero .container {
     position: relative;
     z-index: 1;
+}
+
+/* ── Contact Hero: full-width gradient variant ── */
+.inner-page-hero--contact {
+    width: 100%;
+    background:
+        radial-gradient(circle at 12% 20%, rgba(235, 201, 111, 0.22), transparent 32%),
+        radial-gradient(circle at 88% 85%, rgba(196, 174, 152, 0.20), transparent 34%),
+        linear-gradient(135deg, var(--palette-espresso) 0%, var(--palette-darkest) 100%);
+}
+
+.inner-page-hero--contact::before {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+}
+
+.inner-page-hero--contact .badge-beauty {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--palette-honey);
+}
+
+.inner-page-hero--contact .inner-page-hero-title {
+    color: #fff;
+}
+
+.inner-page-hero--contact .inner-page-hero-title span {
+    color: var(--palette-honey);
+}
+
+.inner-page-hero--contact .inner-page-hero-sub {
+    color: rgba(255, 255, 255, 0.78);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inner-page-hero-title {
@@ -1633,6 +1759,69 @@ footer ul li a:hover {
     background: var(--light-warm);
 }
 
+.contact-details-wrap h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--dark);
+}
+
+.contact-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px;
+}
+
+.contact-divider .line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: var(--border);
+}
+
+.contact-divider .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary);
+    flex-shrink: 0;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-detail-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.contact-detail-text h6 {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.contact-detail-text p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    margin-bottom: 6px;
+}
+
 .contact-form-wrap {
     background: var(--card);
     border-radius: 28px;
@@ -1675,15 +1864,89 @@ textarea.contact-input {
     height: 52px;
 }
 
+.contact-location-strip {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 26px 32px;
+}
+
+.contact-location-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #FDFCFB;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+}
+
+.contact-location-text {
+    flex: 1;
+}
+
+.contact-location-text h6 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.contact-location-text p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.contact-location-link {
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contact-location-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .contact-location-strip {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 24px 22px;
+    }
+
+    .contact-location-text {
+        flex: 1 1 100%;
+    }
+}
+
 .contact-map-wrap {
-    border-radius: 28px;
+    width: 100%;
     overflow: hidden;
-    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.07);
+    line-height: 0;
+}
+
+.contact-map-wrap iframe {
+    display: block;
 }
 
 @media (max-width: 991px) {
     .contact-form-wrap {
         padding: 30px 24px;
+    }
+
+    .contact-details-wrap h2 {
+        font-size: 1.7rem;
     }
 }
 
