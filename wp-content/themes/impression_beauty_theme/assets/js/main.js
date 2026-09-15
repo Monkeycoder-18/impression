@@ -55,3 +55,23 @@
 
     startAuto();
 }());
+
+/* ── Hero h1: shrink font-size based on character length ── */
+(function () {
+    const h1 = document.querySelector('.hero h1');
+    if (!h1) return;
+
+    const len = h1.textContent.trim().length;
+
+    if (len > 80) {
+        // Very long title
+        h1.style.fontSize = 'clamp(1.8rem, 1.4vw + 0.8rem, 2.8rem)';
+    } else if (len > 60) {
+        // Long title
+        h1.style.fontSize = 'clamp(2.2rem, 1.6vw + 1rem, 3.2rem)';
+    } else if (len > 40) {
+        // Medium-long title
+        h1.style.fontSize = 'clamp(2.6rem, 1.8vw + 1rem, 3.8rem)';
+    }
+    // ≤ 40 chars → keep the default CSS clamp (3.2rem … 4.5rem)
+}());
