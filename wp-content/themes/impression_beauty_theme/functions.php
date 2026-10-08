@@ -187,3 +187,6 @@ add_filter( 'body_class', function( $classes ) {
     return $classes;
 } );
 
+require get_template_directory() . '/inc/acf-contact-us.php';
+require get_template_directory() . '/inc/acf-faq.php';
+

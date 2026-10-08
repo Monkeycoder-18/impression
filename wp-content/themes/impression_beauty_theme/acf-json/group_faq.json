@@ -1,0 +1,182 @@
+{
+    "key": "group_faq",
+    "title": "FAQ",
+    "fields": [
+        {
+            "key": "field_faq_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "instructions": "The banner at the top of the FAQ page."
+        },
+        {
+            "key": "field_faq_hero_badge",
+            "label": "Hero badge",
+            "name": "faq_hero_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_hero_title",
+            "label": "Hero title",
+            "name": "faq_hero_title",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_hero_highlight",
+            "label": "Highlighted words",
+            "name": "faq_hero_highlight",
+            "type": "text",
+            "instructions": "Shown in the accent color after the hero title."
+        },
+        {
+            "key": "field_faq_hero_intro",
+            "label": "Intro text",
+            "name": "faq_hero_intro",
+            "type": "wysiwyg",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_faq_questions_tab",
+            "label": "Questions",
+            "name": "",
+            "type": "tab",
+            "instructions": "The category tabs on the FAQ page. General, Face Care, and the rest are rows here. Inside a tab, groups are the smaller headings such as Appointments. Each group holds the questions."
+        },
+        {
+            "key": "field_faq_tabs",
+            "label": "FAQ tabs",
+            "name": "faq_tabs",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a tab",
+            "sub_fields": [
+                {
+                    "key": "field_faq_tab_name",
+                    "label": "Tab name",
+                    "name": "name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_faq_tab_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "instructions": "Optional photo shown above the questions. Leave empty for tabs like General."
+                },
+                {
+                    "key": "field_faq_groups",
+                    "label": "Groups",
+                    "name": "groups",
+                    "type": "repeater",
+                    "layout": "block",
+                    "button_label": "Add a group",
+                    "instructions": "A group is a heading such as Consultation or Payment. Leave the label empty when the tab has no smaller heading.",
+                    "sub_fields": [
+                        {
+                            "key": "field_faq_group_label",
+                            "label": "Group label",
+                            "name": "label",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_faq_questions",
+                            "label": "Questions",
+                            "name": "questions",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Add a question",
+                            "sub_fields": [
+                                {
+                                    "key": "field_faq_question",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_faq_answer",
+                                    "label": "Answer",
+                                    "name": "answer",
+                                    "type": "wysiwyg",
+                                    "tabs": "visual",
+                                    "toolbar": "basic",
+                                    "media_upload": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_faq_help_tab",
+            "label": "Still have questions",
+            "name": "",
+            "type": "tab",
+            "instructions": "The banner at the bottom of the FAQ page."
+        },
+        {
+            "key": "field_faq_help_badge",
+            "label": "Badge",
+            "name": "faq_help_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_help_heading",
+            "label": "Heading",
+            "name": "faq_help_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_help_text",
+            "label": "Text",
+            "name": "faq_help_text",
+            "type": "wysiwyg",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_faq_help_phone_text",
+            "label": "Phone button",
+            "name": "faq_help_phone_text",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_help_phone_link",
+            "label": "Phone link",
+            "name": "faq_help_phone_link",
+            "type": "text",
+            "instructions": "A phone link such as tel:+6563339093."
+        },
+        {
+            "key": "field_faq_help_button_text",
+            "label": "Contact button",
+            "name": "faq_help_button_text",
+            "type": "text"
+        },
+        {
+            "key": "field_faq_help_button_link",
+            "label": "Contact button link",
+            "name": "faq_help_button_link",
+            "type": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-faq-page.php"
+            }
+        ]
+    ],
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}
