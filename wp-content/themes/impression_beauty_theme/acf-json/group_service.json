@@ -1,0 +1,369 @@
+{
+    "key": "group_service",
+    "title": "Service Page",
+    "fields": [
+        {
+            "key": "field_service_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "instructions": "The banner at the top of the page. The big heading uses the page title, so edit that in the Title field above."
+        },
+        {
+            "key": "field_service_hero_badge",
+            "label": "Badge",
+            "name": "service_hero_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_service_hero_subtitle",
+            "label": "Subtitle",
+            "name": "service_hero_subtitle",
+            "type": "textarea",
+            "rows": 3,
+            "instructions": "Leave empty to use the page excerpt, then the default text."
+        },
+        {
+            "key": "field_service_hero_image",
+            "label": "Image",
+            "name": "service_hero_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "instructions": "Leave empty to use the featured image."
+        },
+        {
+            "key": "field_service_hero_float_badge",
+            "label": "Floating badge",
+            "name": "service_hero_float_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_service_hero_btn1_text",
+            "label": "Primary button text",
+            "name": "service_hero_btn1_text",
+            "type": "text"
+        },
+        {
+            "key": "field_service_hero_btn1_link",
+            "label": "Primary button link",
+            "name": "service_hero_btn1_link",
+            "type": "text"
+        },
+        {
+            "key": "field_service_hero_btn2_text",
+            "label": "Secondary button text",
+            "name": "service_hero_btn2_text",
+            "type": "text"
+        },
+        {
+            "key": "field_service_hero_btn2_link",
+            "label": "Secondary button link",
+            "name": "service_hero_btn2_link",
+            "type": "text"
+        },
+        {
+            "key": "field_service_stats_tab",
+            "label": "Stats bar",
+            "name": "",
+            "type": "tab",
+            "instructions": "The row of numbers under the hero. Leave empty to keep the defaults."
+        },
+        {
+            "key": "field_service_stats",
+            "label": "Stats",
+            "name": "service_stats",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add a stat",
+            "sub_fields": [
+                {
+                    "key": "field_service_stat_number",
+                    "label": "Number",
+                    "name": "number",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_stat_label",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_service_intro_tab",
+            "label": "Intro",
+            "name": "",
+            "type": "tab",
+            "instructions": "The split image + text block (\"Why Choose...\")."
+        },
+        {
+            "key": "field_service_intro_image",
+            "label": "Image",
+            "name": "service_intro_image",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_service_intro_badge",
+            "label": "Badge",
+            "name": "service_intro_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_service_intro_heading",
+            "label": "Heading",
+            "name": "service_intro_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_intro_paragraph_1",
+            "label": "Paragraph 1",
+            "name": "service_intro_paragraph_1",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "key": "field_service_intro_paragraph_2",
+            "label": "Paragraph 2",
+            "name": "service_intro_paragraph_2",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "key": "field_service_intro_checks",
+            "label": "Check items",
+            "name": "service_intro_checks",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add an item",
+            "sub_fields": [
+                {
+                    "key": "field_service_intro_check_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_service_audience_tab",
+            "label": "Who is this for",
+            "name": "",
+            "type": "tab",
+            "instructions": "The three concern / skin-type cards."
+        },
+        {
+            "key": "field_service_audience_heading",
+            "label": "Heading",
+            "name": "service_audience_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_audience_subheading",
+            "label": "Subheading",
+            "name": "service_audience_subheading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_audience_cards",
+            "label": "Cards",
+            "name": "service_audience_cards",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a card",
+            "sub_fields": [
+                {
+                    "key": "field_service_audience_card_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_service_audience_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_audience_card_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_service_treatments_tab",
+            "label": "Treatments",
+            "name": "",
+            "type": "tab",
+            "instructions": "The recommended treatments grid."
+        },
+        {
+            "key": "field_service_treatments_heading",
+            "label": "Heading",
+            "name": "service_treatments_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_treatments_subheading",
+            "label": "Subheading",
+            "name": "service_treatments_subheading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_treatments",
+            "label": "Treatments",
+            "name": "service_treatments",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a treatment",
+            "sub_fields": [
+                {
+                    "key": "field_service_treatment_duration",
+                    "label": "Duration",
+                    "name": "duration",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_treatment_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_treatment_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_service_process_tab",
+            "label": "How it works",
+            "name": "",
+            "type": "tab",
+            "instructions": "The numbered process steps."
+        },
+        {
+            "key": "field_service_process_heading",
+            "label": "Heading",
+            "name": "service_process_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_process_subheading",
+            "label": "Subheading",
+            "name": "service_process_subheading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_process_steps",
+            "label": "Steps",
+            "name": "service_process_steps",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a step",
+            "instructions": "Leave the number empty to auto-number (01, 02, 03...).",
+            "sub_fields": [
+                {
+                    "key": "field_service_step_number",
+                    "label": "Number",
+                    "name": "number",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_step_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_step_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_service_cta_tab",
+            "label": "Consultation CTA",
+            "name": "",
+            "type": "tab",
+            "instructions": "The booking banner at the bottom. The enquiry form itself is fixed."
+        },
+        {
+            "key": "field_service_cta_badge",
+            "label": "Badge",
+            "name": "service_cta_badge",
+            "type": "text"
+        },
+        {
+            "key": "field_service_cta_heading",
+            "label": "Heading",
+            "name": "service_cta_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_service_cta_text",
+            "label": "Text",
+            "name": "service_cta_text",
+            "type": "textarea",
+            "rows": 3
+        },
+        {
+            "key": "field_service_cta_phone_text",
+            "label": "Phone button text",
+            "name": "service_cta_phone_text",
+            "type": "text"
+        },
+        {
+            "key": "field_service_cta_phone_link",
+            "label": "Phone link",
+            "name": "service_cta_phone_link",
+            "type": "text",
+            "instructions": "A phone link such as tel:+6563339093."
+        },
+        {
+            "key": "field_service_cta_whatsapp_text",
+            "label": "WhatsApp button text",
+            "name": "service_cta_whatsapp_text",
+            "type": "text"
+        },
+        {
+            "key": "field_service_cta_whatsapp_link",
+            "label": "WhatsApp link",
+            "name": "service_cta_whatsapp_link",
+            "type": "url"
+        },
+        {
+            "key": "field_service_cta_hours",
+            "label": "Operating hours",
+            "name": "service_cta_hours",
+            "type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-service-page.php"
+            }
+        ]
+    ],
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}

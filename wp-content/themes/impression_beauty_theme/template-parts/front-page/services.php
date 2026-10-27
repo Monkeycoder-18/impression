@@ -1,6 +1,8 @@
 <?php
 
-$services = get_field('services-repeater');
+$services         = get_field('services-repeater');
+$services_heading = get_field('home_services_heading');
+$services_intro   = get_field('home_services_intro');
 ?>
 
 <!-- SERVICES -->
@@ -8,10 +10,14 @@ $services = get_field('services-repeater');
     <div class="container">
 
         <div class="section-title">
-            <h2>Our Services</h2>
-            <p>As beauty evolves, we continue to grow with the times while staying true to what matters most. We never follow trends blindly. Instead, we carefully select treatments and approaches that are <b>safe, effective and suited to your individual needs</b> .
-                At the heart of everything we do are our core values of safety, </b>sincerity and authenticity</b> . With decades of experience, we believe true beauty is not about chasing trends, but about caring for your skin and body in a way that is thoughtful, responsible and sustainable.
-                <b>Timeless care. Genuine expertise. Beauty you can trust.</b>.</p>
+            <h2><?php echo esc_html($services_heading ? $services_heading : 'Our Services'); ?></h2>
+            <?php if ($services_intro) : ?>
+                <div><?php echo wp_kses_post($services_intro); ?></div>
+            <?php else : ?>
+                <p>As beauty evolves, we continue to grow with the times while staying true to what matters most. We never follow trends blindly. Instead, we carefully select treatments and approaches that are <b>safe, effective and suited to your individual needs</b>.
+                    At the heart of everything we do are our core values of safety, <b>sincerity and authenticity</b>. With decades of experience, we believe true beauty is not about chasing trends, but about caring for your skin and body in a way that is thoughtful, responsible and sustainable.
+                    <b>Timeless care. Genuine expertise. Beauty you can trust.</b></p>
+            <?php endif; ?>
         </div>
 
         <?php if ($services) : ?>

@@ -8,6 +8,9 @@ $news_query = new WP_Query([
     'order'          => 'DESC',
 ]);
 
+$news_heading = get_field('home_news_heading');
+$news_intro   = get_field('home_news_intro');
+
 ?>
 
 <!-- NEWS -->
@@ -15,8 +18,8 @@ $news_query = new WP_Query([
     <div class="container">
 
         <div class="section-title">
-            <h2>Latest Updates</h2>
-            <p>Check out our latest promos, pricing changes, and other updates from Impression Beauty.</p>
+            <h2><?php echo esc_html($news_heading ? $news_heading : 'Latest Updates'); ?></h2>
+            <p><?php echo esc_html($news_intro ? $news_intro : 'Check out our latest promos, pricing changes, and other updates from Impression Beauty.'); ?></p>
         </div>
 
         <?php if ($news_query->have_posts()) : ?>

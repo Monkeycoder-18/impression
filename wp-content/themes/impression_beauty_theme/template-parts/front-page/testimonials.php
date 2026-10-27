@@ -1,6 +1,8 @@
 <?php
 
-$testimonials = get_field('testimonials-repeater');
+$testimonials         = get_field('testimonials-repeater');
+$testimonials_heading = get_field('home_testimonials_heading');
+$testimonials_intro   = get_field('home_testimonials_intro');
 
 ?>
 
@@ -9,8 +11,8 @@ $testimonials = get_field('testimonials-repeater');
     <div class="container">
 
         <div class="section-title">
-            <h2>Testimonials</h2>
-            <p>Know what our customers say. <br> Loved by beauty enthusiasts and skincare lovers.</p>
+            <h2><?php echo esc_html($testimonials_heading ? $testimonials_heading : 'Testimonials'); ?></h2>
+            <p><?php echo $testimonials_intro ? wp_kses_post($testimonials_intro) : 'Know what our customers say. <br> Loved by beauty enthusiasts and skincare lovers.'; ?></p>
         </div>
 
         <?php if ($testimonials) : ?>

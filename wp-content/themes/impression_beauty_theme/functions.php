@@ -189,4 +189,12 @@ add_filter( 'body_class', function( $classes ) {
 
 require get_template_directory() . '/inc/acf-contact-us.php';
 require get_template_directory() . '/inc/acf-faq.php';
+require get_template_directory() . '/inc/acf-service.php';
+require get_template_directory() . '/inc/acf-home.php';
+require get_template_directory() . '/inc/acf-about.php';
+
+// TEMPORARY: Tools → ACF migration. Remove once the live migration is applied.
+if ( is_admin() ) {
+    require get_template_directory() . '/inc/acf-migration.php';
+}
 
