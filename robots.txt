@@ -1,2 +1,9 @@
+# Staging site: only Anthropic's Claude crawlers may crawl it.
+# At launch on impressionbeauty.com, open this up to all crawlers.
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: *
 Disallow: /
