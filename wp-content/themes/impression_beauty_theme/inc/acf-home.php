@@ -135,7 +135,7 @@ add_action( 'acf/init', function () {
                 'instructions' => 'The bundle deals / promotion box.',
             ],
             [
-                'key'           => 'field_6a8e790900017',
+                'key'           => 'field_6a8e7a6a81d08',
                 'label'         => 'Image',
                 'name'          => 'trend_image',
                 'type'          => 'image',
@@ -143,7 +143,7 @@ add_action( 'acf/init', function () {
                 'preview_size'  => 'medium',
             ],
             [
-                'key'          => 'field_6a8e799a00018',
+                'key'          => 'field_6a8e7a8181d09',
                 'label'        => 'Content',
                 'name'         => 'trend_content',
                 'type'         => 'wysiwyg',

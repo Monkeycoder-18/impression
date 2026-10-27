@@ -80,7 +80,7 @@ function impression_acf_migration_run( $apply ) {
     // ── 2. Saved content must point at the same field keys ──────────────
     echo "\nField key check (saved content -> field definition):\n";
     $expected = [
-        $home_id  => [ 'header-hero-header' => 'field_6a466ba7a1990', 'header-hero-content' => 'field_6a46769228abe', 'hero-image-background' => 'field_6a467d42b10af', 'hero-repeater-image' => 'field_6a467d7fb10b0', 'services-repeater' => 'field_6a4687e4f3581', 'testimonials-repeater' => 'field_6a468ce595f0f', 'trend_image' => 'field_6a8e790900017', 'trend_content' => 'field_6a8e799a00018' ],
+        $home_id  => [ 'header-hero-header' => 'field_6a466ba7a1990', 'header-hero-content' => 'field_6a46769228abe', 'hero-image-background' => 'field_6a467d42b10af', 'hero-repeater-image' => 'field_6a467d7fb10b0', 'services-repeater' => 'field_6a4687e4f3581', 'testimonials-repeater' => 'field_6a468ce595f0f', 'trend_image' => 'field_6a8e7a6a81d08', 'trend_content' => 'field_6a8e7a8181d09' ],
         $about_id => [ 'about_hero_title' => 'field_6a4a8e84610b9', 'about_hero_image' => 'field_6a4a8f6d610bc', 'stats_items' => 'field_6a4a9a097a2f9', 'story_heading' => 'field_6a4a9e58335d3', 'story_check_items' => 'field_6a4a9ea3335d6', 'vision_title' => 'field_6a4aa1becfa9e', 'mission_content' => 'field_6a4aa20acfaa1' ],
     ];
     $mismatch = 0;
@@ -99,15 +99,25 @@ function impression_acf_migration_run( $apply ) {
     }
 
     // ── 3. Old field groups still stored in the database ────────────────
-    $old_keys  = [ 'group_6a466ba725a81', 'group_6a4687e4623bb', 'group_6a468ce511f9e', 'group_6a8e7908bb1c5', 'group_6a4a8e83f1207' ];
+    $old_keys  = [ 'group_6a466ba725a81', 'group_6a4687e4623bb', 'group_6a468ce511f9e', 'group_6a8e7908bb1c5', 'group_6a8e7a69aea40', 'group_6a4a8e83f1207' ];
     $to_delete = [];
     echo "\nField groups stored in the database:\n";
     $db_groups = get_posts( [ 'post_type' => 'acf-field-group', 'post_status' => 'any', 'numberposts' => -1 ] );
+    // Every field of a group we delete must also be defined in the theme code.
+    $theme_names = [];
+    foreach ( [ 'group_home', 'group_about', 'group_service' ] as $key ) {
+        $theme_names = array_merge( $theme_names, array_column( acf_get_fields( $key ), 'name' ) );
+    }
     foreach ( $db_groups as $p ) {
         $is_old = in_array( $p->post_name, $old_keys, true );
         echo ( $is_old ? '  del ' : '  keep' ) . " {$p->ID} {$p->post_title} ({$p->post_name})\n";
         if ( $is_old ) {
             $to_delete[] = $p->ID;
+            $names = wp_list_pluck( get_posts( [ 'post_type' => 'acf-field', 'post_parent' => $p->ID, 'post_status' => 'any', 'numberposts' => -1 ] ), 'post_excerpt' );
+            foreach ( array_diff( $names, $theme_names ) as $name ) {
+                echo "        !!  field '$name' is not defined in the theme code\n";
+                $mismatch++;
+            }
         }
     }
     if ( ! $db_groups ) {
@@ -180,7 +190,7 @@ function impression_acf_migration_run( $apply ) {
     $trend = get_field( 'trend_content', $home_id, false );
     $fixed = preg_replace( '#<a( href="[^"]*")? class="btn btn-beauty">Discover More#', '<a href="' . esc_url( get_permalink( $ids['promotions'] ) ) . '" class="btn btn-beauty">Discover More', (string) $trend, 1 );
     if ( $fixed !== $trend ) {
-        update_field( 'field_6a8e799a00018', $fixed, $home_id );
+        update_field( 'field_6a8e7a8181d09', $fixed, $home_id );
         echo "  home promo button now links to the Promotions page\n";
     }
 
