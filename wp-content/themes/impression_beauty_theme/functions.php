@@ -196,8 +196,3 @@ require get_template_directory() . '/inc/acf-promotion.php';
 require get_template_directory() . '/inc/acf-footer.php';
 require get_template_directory() . '/inc/contact-form.php';
 
-// TEMPORARY: Tools → ACF migration. Remove once the live migration is applied.
-if ( is_admin() ) {
-    require get_template_directory() . '/inc/acf-migration.php';
-}
-
