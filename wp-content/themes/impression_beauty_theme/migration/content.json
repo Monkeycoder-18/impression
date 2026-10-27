@@ -1,0 +1,3001 @@
+{
+    "pages": {
+        "face-care": {
+            "title": "Face Care",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-service-page.php",
+            "acf": {
+                "service_hero_badge": {
+                    "ref": "field_service_hero_badge",
+                    "type": "text",
+                    "value": "Impression Beauty"
+                },
+                "service_hero_subtitle": {
+                    "ref": "field_service_hero_subtitle",
+                    "type": "textarea",
+                    "value": "Facial treatments for dry, oily, combination, sensitive and pigmented skin, matched to your skin type."
+                },
+                "service_hero_image": {
+                    "ref": "field_service_hero_image",
+                    "type": "image",
+                    "value": "231"
+                },
+                "service_hero_float_badge": {
+                    "ref": "field_service_hero_float_badge",
+                    "type": "text",
+                    "value": "Since 1994"
+                },
+                "service_hero_btn1_text": {
+                    "ref": "field_service_hero_btn1_text",
+                    "type": "text",
+                    "value": "View Treatments"
+                },
+                "service_hero_btn1_link": {
+                    "ref": "field_service_hero_btn1_link",
+                    "type": "text",
+                    "value": "#treatments"
+                },
+                "service_hero_btn2_text": {
+                    "ref": "field_service_hero_btn2_text",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_hero_btn2_link": {
+                    "ref": "field_service_hero_btn2_link",
+                    "type": "text",
+                    "value": "#consultation"
+                },
+                "service_stats_0_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30+"
+                },
+                "service_stats_0_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Years Experience"
+                },
+                "service_stats_1_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "10"
+                },
+                "service_stats_1_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Facial Treatments"
+                },
+                "service_stats_2_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "45–90"
+                },
+                "service_stats_2_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Minutes per Session"
+                },
+                "service_stats_3_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "5&#9733;"
+                },
+                "service_stats_3_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Customer Rated"
+                },
+                "service_stats": {
+                    "ref": "field_service_stats",
+                    "type": "repeater",
+                    "value": "4"
+                },
+                "service_intro_image": {
+                    "ref": "field_service_intro_image",
+                    "type": "image",
+                    "value": "79"
+                },
+                "service_intro_badge": {
+                    "ref": "field_service_intro_badge",
+                    "type": "text",
+                    "value": "Face Care"
+                },
+                "service_intro_heading": {
+                    "ref": "field_service_intro_heading",
+                    "type": "text",
+                    "value": "Sincerely Beautifying People Since 1994"
+                },
+                "service_intro_paragraph_1": {
+                    "ref": "field_service_intro_paragraph_1",
+                    "type": "textarea",
+                    "value": "Skin is generally classified into few categories: normal, dry, oily, and combination. There are also special categories like sensitive and pigmentation skins. Your skin type can change as you age, and other factors like genetics and even illness can play a part."
+                },
+                "service_intro_paragraph_2": {
+                    "ref": "field_service_intro_paragraph_2",
+                    "type": "wysiwyg",
+                    "value": "<p>It’s multi-factorial. Most people have normal skin when they are born, but as they grow up, various factors including habit, lifestyle, environmental and even genetic composition will affect the skin and change its characteristics resulting in various categories that we have.</p><p>Normal skin, which has a good balance of moisture, small pores and an even tone, is the goal of most skin care regimens. To maintain its good condition, it’s important to minimize its exposure to the sun and other environmental factors. It’s also important to have good habit and lifestyle.</p>"
+                },
+                "service_intro_checks": {
+                    "ref": "field_service_intro_checks",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_audience_heading": {
+                    "ref": "field_service_audience_heading",
+                    "type": "text",
+                    "value": "Who Is This For?"
+                },
+                "service_audience_subheading": {
+                    "ref": "field_service_audience_subheading",
+                    "type": "text",
+                    "value": "Treatments designed for every concern and skin type."
+                },
+                "service_audience_cards_0_image": {
+                    "ref": "field_service_audience_card_image",
+                    "type": "image",
+                    "value": "241"
+                },
+                "service_audience_cards_0_title": {
+                    "ref": "field_service_audience_card_title",
+                    "type": "text",
+                    "value": "Dry & Sensitive Skin"
+                },
+                "service_audience_cards_0_description": {
+                    "ref": "field_service_audience_card_desc",
+                    "type": "text",
+                    "value": "Restore hydration and soothe irritated skin."
+                },
+                "service_audience_cards_1_image": {
+                    "ref": "field_service_audience_card_image",
+                    "type": "image",
+                    "value": "242"
+                },
+                "service_audience_cards_1_title": {
+                    "ref": "field_service_audience_card_title",
+                    "type": "text",
+                    "value": "Oily & Combination Skin"
+                },
+                "service_audience_cards_1_description": {
+                    "ref": "field_service_audience_card_desc",
+                    "type": "text",
+                    "value": "Control excess sebum and refine large pores."
+                },
+                "service_audience_cards_2_image": {
+                    "ref": "field_service_audience_card_image",
+                    "type": "image",
+                    "value": "243"
+                },
+                "service_audience_cards_2_title": {
+                    "ref": "field_service_audience_card_title",
+                    "type": "text",
+                    "value": "Pigmentation & Ageing"
+                },
+                "service_audience_cards_2_description": {
+                    "ref": "field_service_audience_card_desc",
+                    "type": "text",
+                    "value": "Even skin tone and reduce visible signs of ageing."
+                },
+                "service_audience_cards": {
+                    "ref": "field_service_audience_cards",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_treatments_heading": {
+                    "ref": "field_service_treatments_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_treatments_subheading": {
+                    "ref": "field_service_treatments_subheading",
+                    "type": "text",
+                    "value": "Carefully curated procedures for visible, lasting results."
+                },
+                "service_treatments": {
+                    "ref": "field_service_treatments",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_process_heading": {
+                    "ref": "field_service_process_heading",
+                    "type": "text",
+                    "value": "How It Works"
+                },
+                "service_process_subheading": {
+                    "ref": "field_service_process_subheading",
+                    "type": "text",
+                    "value": "A simple, comfortable process from consultation to results."
+                },
+                "service_process_steps_0_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "01"
+                },
+                "service_process_steps_0_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_process_steps_0_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Our consultant checks your skin type and concerns, then recommends the facial that suits you."
+                },
+                "service_process_steps_1_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "02"
+                },
+                "service_process_steps_1_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Your Facial"
+                },
+                "service_process_steps_1_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Your treatment is done in a clean, comfortable room. Facials take 45–90 mins."
+                },
+                "service_process_steps_2_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "03"
+                },
+                "service_process_steps_2_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Review & Follow Up"
+                },
+                "service_process_steps_2_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "We review your results and adjust your treatment plan as your skin changes."
+                },
+                "service_process_steps": {
+                    "ref": "field_service_process_steps",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_cta_badge": {
+                    "ref": "field_service_cta_badge",
+                    "type": "text",
+                    "value": "Get Started Today"
+                },
+                "service_cta_heading": {
+                    "ref": "field_service_cta_heading",
+                    "type": "text",
+                    "value": "Book Your Free Consultation"
+                },
+                "service_cta_text": {
+                    "ref": "field_service_cta_text",
+                    "type": "textarea",
+                    "value": "Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly."
+                },
+                "service_cta_phone_text": {
+                    "ref": "field_service_cta_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "service_cta_phone_link": {
+                    "ref": "field_service_cta_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "service_cta_whatsapp_text": {
+                    "ref": "field_service_cta_whatsapp_text",
+                    "type": "text",
+                    "value": "WhatsApp Us"
+                },
+                "service_cta_whatsapp_link": {
+                    "ref": "field_service_cta_whatsapp_link",
+                    "type": "url",
+                    "value": "https://wa.me/6598678787"
+                },
+                "service_cta_hours": {
+                    "ref": "field_service_cta_hours",
+                    "type": "text",
+                    "value": "Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm"
+                },
+                "service_sections_0_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Treatments for Dry, Thin, Matured, Uneven Tone & Dull Skin"
+                },
+                "service_sections_0_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Dry skin suffers from a lack of natural moisture — there’s little oil to act as a surface barrier and lock in moisture. People with dry skin feel tightness about their face, and their skin is often irritated. Flaking is another symptom, but it’s not always a sure sign of dry skin.</p><p>Sometimes, severely dry skin can become itchy and painful, leading to a condition called eczema. Treatment of certain medical conditions can sometimes lead to dry skin.</p><p>For example, breast cancer treatment may stop hormone production which could in turn affect the quality of your skin.</p><p>It might throw people into a menopausal situation at an early age as the oil production stops prematurely. Naturally-occurring menopause can have the same effect; most women begin to experience drier skin as they hit their late forties.</p>"
+                },
+                "service_sections_0_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "277"
+                },
+                "service_sections_0_items_heading": {
+                    "ref": "field_service_section_items_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_sections_0_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Multi Fruits Energizing Treatment"
+                },
+                "service_sections_0_items_0_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_0_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "High Minerals & Vitamins content products to strengthen skin cellular and protect skin against free radical and ultra-violet lights, to fight skin aging. Gives skin brighter and fairer look."
+                },
+                "service_sections_0_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Skin RejuV Treatment (normal to dry skin)"
+                },
+                "service_sections_0_items_1_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_0_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Dry flaky and red skin treatment by using complete Hydra Silk skin care containing high silk protein that can immediately replace lost moisture. It reduces redness, anti-sensitivity, produces calmness and reduces allergy problem."
+                },
+                "service_sections_0_items_2_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "RF Treatment"
+                },
+                "service_sections_0_items_2_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "60 mins"
+                },
+                "service_sections_0_items_2_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For mature sagging skin. Using Bio Heat to promote cell regeneration, improve blood and lymph circulation and provide instant lift."
+                },
+                "service_sections_0_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_sections_1_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Treatments for Oily Combination, Rough, Open Pore & Blemish Skin"
+                },
+                "service_sections_1_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Oily skin is identified by an excess of oil (the technical term is sebum) on the face. Some people with oily skin begin to feel greasy only a few hours after washing.</p><p>A very oily person would feel the need to wash their face between noon and 5 p.m., because oil has built up during the day. Oily skin can be an inherited trait, but it can also be caused by puberty, which causes oil glands to go into overdrive.</p><p>You may also notice more oil on your “T-zone” because of all the oil glands in the forehead, nose, and chin.</p>"
+                },
+                "service_sections_1_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "278"
+                },
+                "service_sections_1_items_heading": {
+                    "ref": "field_service_section_items_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_sections_1_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Skin Fruition / Renewal Treatment"
+                },
+                "service_sections_1_items_0_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_1_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For oily blemishes non-sensitive skin. With AHA range products to soften, smoothen, lighten uneven skin and reduced blemishes formed."
+                },
+                "service_sections_1_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Acne Treatment"
+                },
+                "service_sections_1_items_1_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_1_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For oily blemishes skin. Deep cleansing and promote acne anti-septic and healing effect. Control sebum secretion and prevent bacterial infection."
+                },
+                "service_sections_1_items_2_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Diamond Peel Treatment"
+                },
+                "service_sections_1_items_2_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "80 mins"
+                },
+                "service_sections_1_items_2_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Large pore, rough & slight blemishes skin. Effectively remove dead skin cells, refine large pore, smoothen scars and make even the skin tone."
+                },
+                "service_sections_1_items_3_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Fruity Enzyme Treatment"
+                },
+                "service_sections_1_items_3_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_1_items_3_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For oily, combination & sensitive blemish acne skin. Enzyme powder mask is very effective to soften, digest and remove dead cells. It is a very gentle peel for acne sensitive skin."
+                },
+                "service_sections_1_items_4_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Skin RejuV Treatment (oily sensitive skin)"
+                },
+                "service_sections_1_items_4_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_1_items_4_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Using Hydra Silk Protein skin care to calm and soothe sensitive skin."
+                },
+                "service_sections_1_items_5_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Micro Collagen Diamond Treatment"
+                },
+                "service_sections_1_items_5_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_1_items_5_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For rough, oily & dehydrated skin. 2 in 1 treatment which effectively removed dead skin cells, smoothen large pores, scar and evening skin. Tone plus the special H2O Crystal mask instantly replace high moisture to improve dehydration problem."
+                },
+                "service_sections_1_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "6"
+                },
+                "service_sections_2_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Pigmentation"
+                },
+                "service_sections_2_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>From the sun to hormonal changes, many factors can cause skin pigmentation. These include:</p><ul><li><strong>Genetics.</strong> Some people are born with more freckles than others. Similarly, the same goes for larger areas of darker skin from pigmentation. It is also more common among people who have darker skin, such as those with an Asian, Indian, Latin, Middle Eastern, or Mediterranean background. Their skin often has more melanocytes, the skin cells that produce pigment.</li><li><strong>Sun damage.</strong> Ultraviolet rays from the sun will cause the skin to produce more melanocytes, which leads to the dark spots commonly called age spots or liver spots. Prescription drugs may also make the skin more sensitive to the sun causing skin pigmentation.</li><li><strong>Hormonal changes in women.</strong> This can also stimulate more skin pigment to be produced. Birth control pills and hormone replacement therapy may also cause these skin changes.</li><li><strong>Skin irritation.</strong> People with darker skin may get some pigmentation after acne or psoriasis. And for some people, using skin care products that irritate the skin will cause the skin to produce more pigment and cause dark patches. Even rubbing and itching an area of the skin can make it darker.</li></ul><p>If the pigmentation is a result of hormonal changes, your skin may go back to normal at the end of your pregnancy or when you stop taking birth control pills or hormone replacement therapy. In other cases, there are treatments that our consultant can help recommend for your skin condition.</p>"
+                },
+                "service_sections_2_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "0"
+                },
+                "service_sections_2_items_heading": {
+                    "ref": "field_service_section_items_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_sections_2_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Micro Collagen Diamond Treatment"
+                },
+                "service_sections_2_items_0_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "90 mins"
+                },
+                "service_sections_2_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "For rough, oily & dehydrated skin. Two in One treatment which effectively removes dead skin cells, smoothens large pores, scar and makes even skin tone plus the special H2O Crystal mask to instantly replace high moisture improving dehydration problem."
+                },
+                "service_sections_2_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "DPL Rejuvenation Treatment Whole Face / Partial Area"
+                },
+                "service_sections_2_items_1_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "60 / 45 mins"
+                },
+                "service_sections_2_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Light and heat energy stimulates cells to regenerate and promote inner heat to reproduce collagen and to coagulate existing pigment and spider vein to achieve lightening effect. Once every 2 weeks."
+                },
+                "service_sections_2_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "service_sections_3_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Diamond Dermabration Skin Treatment"
+                },
+                "service_sections_3_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>A Non-invasive, gentle deep exfoliation with genuine micro diamond crystal tips. Uses the technology of Suction Therapy which vacuums and exfoliate the corneum layer, cleaned out blocked pores and enhance the skin tone.</p><p><strong>Effect on Face:</strong></p><ul><li>Soften dead skin cells and removal of comedones.</li><li>Creates oxygenation that nourishes the epidermal skin tissue.</li><li>Detoxification and drainage of toxin and lightening effect.</li><li>Firm & tones the skin tissue to produce an instant lift.</li></ul>"
+                },
+                "service_sections_3_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "279"
+                },
+                "service_sections": {
+                    "ref": "field_service_sections",
+                    "type": "repeater",
+                    "value": "4"
+                }
+            }
+        },
+        "body-care": {
+            "title": "Body Care",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-service-page.php",
+            "acf": {
+                "service_hero_badge": {
+                    "ref": "field_service_hero_badge",
+                    "type": "text",
+                    "value": "Impression Beauty"
+                },
+                "service_hero_subtitle": {
+                    "ref": "field_service_hero_subtitle",
+                    "type": "textarea",
+                    "value": "Aromatherapy and meridian massages, body scrubs and ear candling to relax body and mind."
+                },
+                "service_hero_image": {
+                    "ref": "field_service_hero_image",
+                    "type": "image",
+                    "value": "232"
+                },
+                "service_hero_float_badge": {
+                    "ref": "field_service_hero_float_badge",
+                    "type": "text",
+                    "value": "Since 1994"
+                },
+                "service_hero_btn1_text": {
+                    "ref": "field_service_hero_btn1_text",
+                    "type": "text",
+                    "value": "View Treatments"
+                },
+                "service_hero_btn1_link": {
+                    "ref": "field_service_hero_btn1_link",
+                    "type": "text",
+                    "value": "#treatments"
+                },
+                "service_hero_btn2_text": {
+                    "ref": "field_service_hero_btn2_text",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_hero_btn2_link": {
+                    "ref": "field_service_hero_btn2_link",
+                    "type": "text",
+                    "value": "#consultation"
+                },
+                "service_stats_0_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30+"
+                },
+                "service_stats_0_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Years Experience"
+                },
+                "service_stats_1_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "5&#9733;"
+                },
+                "service_stats_1_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Customer Rated"
+                },
+                "service_stats": {
+                    "ref": "field_service_stats",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "service_intro_image": {
+                    "ref": "field_service_intro_image",
+                    "type": "image",
+                    "value": "280"
+                },
+                "service_intro_badge": {
+                    "ref": "field_service_intro_badge",
+                    "type": "text",
+                    "value": "Body Care"
+                },
+                "service_intro_heading": {
+                    "ref": "field_service_intro_heading",
+                    "type": "text",
+                    "value": "Aromatherapy Full Body Massage & Body Wrap"
+                },
+                "service_intro_paragraph_1": {
+                    "ref": "field_service_intro_paragraph_1",
+                    "type": "textarea",
+                    "value": "Occasional massage treatment has been known to affect dramatic changes in both body and mind. However, to relieve or cure most physical and emotional problems, regular massage sessions are usually necessary. Good regular massages promote the effects of the following:"
+                },
+                "service_intro_paragraph_2": {
+                    "ref": "field_service_intro_paragraph_2",
+                    "type": "wysiwyg",
+                    "value": "<ul><li>Massage induces deep relaxation.</li><li>Regular massage helps to release tension that enables the receiver to overcome long-standing emotional turmoil because renewed energy can help to cope with the stress.</li><li>Improves self esteem.</li><li>Relieves mental & physical fatigue.</li><li>Reduces fat stored in your tissues.</li><li>Massage is a form of passive exercise that can partially compensate for lack of exercise.</li></ul>"
+                },
+                "service_intro_checks": {
+                    "ref": "field_service_intro_checks",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_audience_heading": {
+                    "ref": "field_service_audience_heading",
+                    "type": "text",
+                    "value": "Who Is This For?"
+                },
+                "service_audience_subheading": {
+                    "ref": "field_service_audience_subheading",
+                    "type": "text",
+                    "value": "Treatments designed for every concern and skin type."
+                },
+                "service_audience_cards": {
+                    "ref": "field_service_audience_cards",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_treatments_heading": {
+                    "ref": "field_service_treatments_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_treatments_subheading": {
+                    "ref": "field_service_treatments_subheading",
+                    "type": "text",
+                    "value": "Carefully curated procedures for visible, lasting results."
+                },
+                "service_treatments": {
+                    "ref": "field_service_treatments",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_process_heading": {
+                    "ref": "field_service_process_heading",
+                    "type": "text",
+                    "value": "How It Works"
+                },
+                "service_process_subheading": {
+                    "ref": "field_service_process_subheading",
+                    "type": "text",
+                    "value": "A simple, comfortable process from consultation to results."
+                },
+                "service_process_steps_0_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "01"
+                },
+                "service_process_steps_0_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_process_steps_0_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Tell us how you feel and which areas need attention, and we will recommend the right massage or body treatment."
+                },
+                "service_process_steps_1_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "02"
+                },
+                "service_process_steps_1_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Your Treatment"
+                },
+                "service_process_steps_1_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Relax while your therapist carries out the treatment in a clean, comfortable room."
+                },
+                "service_process_steps_2_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "03"
+                },
+                "service_process_steps_2_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Keep It Regular"
+                },
+                "service_process_steps_2_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Regular sessions bring the best results, so we will help you plan your next visit."
+                },
+                "service_process_steps": {
+                    "ref": "field_service_process_steps",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_cta_badge": {
+                    "ref": "field_service_cta_badge",
+                    "type": "text",
+                    "value": "Get Started Today"
+                },
+                "service_cta_heading": {
+                    "ref": "field_service_cta_heading",
+                    "type": "text",
+                    "value": "Book Your Free Consultation"
+                },
+                "service_cta_text": {
+                    "ref": "field_service_cta_text",
+                    "type": "textarea",
+                    "value": "Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly."
+                },
+                "service_cta_phone_text": {
+                    "ref": "field_service_cta_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "service_cta_phone_link": {
+                    "ref": "field_service_cta_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "service_cta_whatsapp_text": {
+                    "ref": "field_service_cta_whatsapp_text",
+                    "type": "text",
+                    "value": "WhatsApp Us"
+                },
+                "service_cta_whatsapp_link": {
+                    "ref": "field_service_cta_whatsapp_link",
+                    "type": "url",
+                    "value": "https://wa.me/6598678787"
+                },
+                "service_cta_hours": {
+                    "ref": "field_service_cta_hours",
+                    "type": "text",
+                    "value": "Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm"
+                },
+                "service_sections_0_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Aromatherapy Full Body Massage"
+                },
+                "service_sections_0_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Aroma is fragrance or smell. Therapy is treatment to heal or to treat. It is the treatment by using essential oil from various parts of aromatic plants and trees to promote a healthy body and serenity of mind.</p><p>Holistic Aromatherapy means the aromatherapy on the whole person through psychologically, physically and spiritually. To give a total wellbeing. In ancient time the Egyptian applied their knowledge of aromatic plants to almost all aspects of life.</p><p>They used them for healing, as ingredient in cosmetic (eg. Cleopatra flower milk bath), even mummification. The Chinese too, used aromatics for religious practices as well as for health and applied them during massage as an additional means of maintaining a healthy body.</p><p>In India the traditional Ayuvedic medical practice too by using various aromatic herb and essential oil to give and treat in spiritual and health.</p>"
+                },
+                "service_sections_0_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "281"
+                },
+                "service_sections_1_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Meridian Full Body Massage"
+                },
+                "service_sections_1_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Meridian Balancing Therapy. For thousands of years Chinese Medicine has used the energy pathways to balance, clear and heal the physical body. Our customized therapeutic MBT massage using a special energy board, focusing to stimulate the meridian channel to achieve the effects of balancing hormonal secretion, increasing the metabolism to eliminate body’s toxic, access fluid in the body and burn stubborn fats & cellulite, pain relieve & anti-aging too.</p><p>MBT massage is a targeting treatment massage for areas like Back, Lower Body, Womb & Ovary, Chest, Face & Head.</p>"
+                },
+                "service_sections_1_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "282"
+                },
+                "service_sections_2_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Benefit of Body Scrub"
+                },
+                "service_sections_2_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<ul><li>Suitable for dry, dull & flaky skin. For skin with mark or uneven tone as well</li><li>Loosen & removed dead cell</li><li>Smoothen skin</li><li>Stimulate the blood circulation & skin metabolism</li><li>To reveal radiant & youthful skin</li></ul>"
+                },
+                "service_sections_2_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "283"
+                },
+                "service_sections_3_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "The History of Ear Candling"
+                },
+                "service_sections_3_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Ear candle have been used by many cultures as an effective natural therapy since ancient times. Historical root can be found among the people of the native of North and South American Indians. The people with great medicinal knowledge and high degree of spirituality brought this knowledge to Europe and Asia countries. Ear candles therapy had been reestablished the popularity since year 1985.</p><ul><li>This induces a pleasant feeling of warmth and a balance of pressure in the ears, forehead and sinuses.</li><li>It is soothing and helpful for earache and headache, ear noise, stress and nervousness. Promote a good relaxation and sense of joy.</li></ul>"
+                },
+                "service_sections_3_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "284"
+                },
+                "service_sections": {
+                    "ref": "field_service_sections",
+                    "type": "repeater",
+                    "value": "4"
+                }
+            }
+        },
+        "eye-care": {
+            "title": "Eye Care",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-service-page.php",
+            "acf": {
+                "service_treatments": {
+                    "ref": "field_service_treatments",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_intro_checks": {
+                    "ref": "field_service_intro_checks",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_audience_cards": {
+                    "ref": "field_service_audience_cards",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_intro_image": {
+                    "ref": "field_service_intro_image",
+                    "type": "image",
+                    "value": "78"
+                },
+                "service_intro_badge": {
+                    "ref": "field_service_intro_badge",
+                    "type": "text",
+                    "value": "Eye Care"
+                },
+                "service_intro_heading": {
+                    "ref": "field_service_intro_heading",
+                    "type": "text",
+                    "value": "We treat, maintain and recover your eye area effectively in the shortest time possible."
+                },
+                "service_intro_paragraph_1": {
+                    "ref": "field_service_intro_paragraph_1",
+                    "type": "textarea",
+                    "value": "Eye care refers eye skin care which is similar to skin treatment but focusing on the eye area. It is special as eye area is very sensitive and requires special treatment. The skin around the eye can be 1/10th as thick as the skin on the rest of the face."
+                },
+                "service_intro_paragraph_2": {
+                    "ref": "field_service_intro_paragraph_2",
+                    "type": "wysiwyg",
+                    "value": "<p>Due to the lesser amount of oil glands around the eyes, this part of the face is more likely to show premature signs of aging if it is neglected. The eye area can show everyone your lack of sleep, overindulgence of food and alcohol and just how good you’re feeling- or not.</p><p>Puffiness and dark circles in this area — caused by lack of sleep, excessive drinking and even hereditary factors — can age your face notably. Proper care can keep this skin looking smooth and youthful by reducing the damage.</p><p>It is therefore necessary to pay special attention to the eye area and treat it diligently and consistently. We have few advanced options available to treat, maintain and recover your eye area effectively in the shortest time possible.</p>"
+                },
+                "service_sections_0_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Eye Treatments for Dry Eye Area"
+                },
+                "service_sections_0_gallery": {
+                    "ref": "field_service_section_gallery",
+                    "type": "gallery",
+                    "value": [
+                        "285",
+                        "286"
+                    ]
+                },
+                "service_sections_1_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Eye Treatment for Combination Eye Area"
+                },
+                "service_sections_1_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": ""
+                },
+                "service_sections_1_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "287"
+                },
+                "service_sections_1_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Micro Collagen Diamond Eye Treatment"
+                },
+                "service_sections_1_items_0_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "50 mins"
+                },
+                "service_sections_1_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Effective to reduce fat deposit around eye area and to even skin tone. Prevent fine lines."
+                },
+                "service_sections_1_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Intensive Eye Treatment"
+                },
+                "service_sections_1_items_1_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "45 mins"
+                },
+                "service_sections_1_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "To reduce fine line and dryness at eye area. Moisturize and firm eye area by using iontonization technology."
+                },
+                "service_sections_1_items_2_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Golden Eye Treatment"
+                },
+                "service_sections_1_items_2_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "50 mins / 30 mins with facial"
+                },
+                "service_sections_1_items_2_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Reduce dark eye ring, eye bag, fine lines and tiredness. Gently remove dead skin cells using ultrasonic skin scraiber follow by penetrating Golden eye care to stimulate circulation and dryness."
+                },
+                "service_sections_1_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_sections_2_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Special Eye Treatment for Tired Droopy Eye Area"
+                },
+                "service_sections_2_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": ""
+                },
+                "service_sections_2_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "288"
+                },
+                "service_sections_2_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Meridian Eye Therapy"
+                },
+                "service_sections_2_items_0_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "45 mins"
+                },
+                "service_sections_2_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "An effective treatment following eastern theory to stimulate meridian, to boosts blood circulation hence reducing dark eye circle, puffiness, wrinkles and most importantly it also helps to alleviate poor and blur vision, dry eye symptoms, migraine and insomnia."
+                },
+                "service_sections_2_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "RF Eye Treatment"
+                },
+                "service_sections_2_items_1_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "40 mins"
+                },
+                "service_sections_2_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Stimulate collagen and elastin to firm and tighten sagging dry eye bag. It promotes deeper circulation under the skin."
+                },
+                "service_sections_2_items_2_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "DPL Eye Treatment"
+                },
+                "service_sections_2_items_2_meta": {
+                    "ref": "field_service_section_item_meta",
+                    "type": "text",
+                    "value": "40 mins"
+                },
+                "service_sections_2_items_2_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Rejuvenate skin, firm and reduce puffy eye bag. It reduces craw feet and wrinkles."
+                },
+                "service_sections_2_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_sections": {
+                    "ref": "field_service_sections",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "service_hero_image": {
+                    "ref": "field_service_hero_image",
+                    "type": "image",
+                    "value": "259"
+                },
+                "service_hero_badge": {
+                    "ref": "field_service_hero_badge",
+                    "type": "text",
+                    "value": "Impression Beauty"
+                },
+                "service_hero_float_badge": {
+                    "ref": "field_service_hero_float_badge",
+                    "type": "text",
+                    "value": "Since 1994"
+                },
+                "service_hero_btn1_text": {
+                    "ref": "field_service_hero_btn1_text",
+                    "type": "text",
+                    "value": "View Treatments"
+                },
+                "service_hero_btn1_link": {
+                    "ref": "field_service_hero_btn1_link",
+                    "type": "text",
+                    "value": "#treatments"
+                },
+                "service_hero_btn2_text": {
+                    "ref": "field_service_hero_btn2_text",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_hero_btn2_link": {
+                    "ref": "field_service_hero_btn2_link",
+                    "type": "text",
+                    "value": "#consultation"
+                },
+                "service_process_heading": {
+                    "ref": "field_service_process_heading",
+                    "type": "text",
+                    "value": "How It Works"
+                },
+                "service_process_subheading": {
+                    "ref": "field_service_process_subheading",
+                    "type": "text",
+                    "value": "A simple, comfortable process from consultation to results."
+                },
+                "service_cta_badge": {
+                    "ref": "field_service_cta_badge",
+                    "type": "text",
+                    "value": "Get Started Today"
+                },
+                "service_cta_heading": {
+                    "ref": "field_service_cta_heading",
+                    "type": "text",
+                    "value": "Book Your Free Consultation"
+                },
+                "service_cta_text": {
+                    "ref": "field_service_cta_text",
+                    "type": "textarea",
+                    "value": "Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly."
+                },
+                "service_cta_phone_text": {
+                    "ref": "field_service_cta_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "service_cta_phone_link": {
+                    "ref": "field_service_cta_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "service_cta_whatsapp_text": {
+                    "ref": "field_service_cta_whatsapp_text",
+                    "type": "text",
+                    "value": "WhatsApp Us"
+                },
+                "service_cta_whatsapp_link": {
+                    "ref": "field_service_cta_whatsapp_link",
+                    "type": "url",
+                    "value": "https://wa.me/6598678787"
+                },
+                "service_cta_hours": {
+                    "ref": "field_service_cta_hours",
+                    "type": "text",
+                    "value": "Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm"
+                },
+                "service_hero_subtitle": {
+                    "ref": "field_service_hero_subtitle",
+                    "type": "textarea",
+                    "value": "Advanced treatments to treat, maintain and recover the delicate skin around your eyes."
+                },
+                "service_stats_0_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30+"
+                },
+                "service_stats_0_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Years Experience"
+                },
+                "service_stats_1_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "6"
+                },
+                "service_stats_1_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Eye Treatments"
+                },
+                "service_stats_2_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30–50"
+                },
+                "service_stats_2_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Minutes per Session"
+                },
+                "service_stats_3_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "5&#9733;"
+                },
+                "service_stats_3_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Customer Rated"
+                },
+                "service_stats": {
+                    "ref": "field_service_stats",
+                    "type": "repeater",
+                    "value": "4"
+                },
+                "service_process_steps_0_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "01"
+                },
+                "service_process_steps_0_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_process_steps_0_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Our consultant checks your eye area for dryness, puffiness, dark circles or droopiness, and recommends a treatment."
+                },
+                "service_process_steps_1_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "02"
+                },
+                "service_process_steps_1_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Your Eye Treatment"
+                },
+                "service_process_steps_1_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Your treatment is done in a clean, comfortable room. Eye treatments take 30–50 mins."
+                },
+                "service_process_steps_2_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "03"
+                },
+                "service_process_steps_2_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Review & Follow Up"
+                },
+                "service_process_steps_2_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "The eye area needs consistent care, so we review your results and plan your next session."
+                },
+                "service_process_steps": {
+                    "ref": "field_service_process_steps",
+                    "type": "repeater",
+                    "value": "3"
+                }
+            }
+        },
+        "hair-removal": {
+            "title": "Hair Removal",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-service-page.php",
+            "acf": {
+                "service_treatments": {
+                    "ref": "field_service_treatments",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_intro_checks": {
+                    "ref": "field_service_intro_checks",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_audience_cards": {
+                    "ref": "field_service_audience_cards",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_intro_image": {
+                    "ref": "field_service_intro_image",
+                    "type": "image",
+                    "value": "80"
+                },
+                "service_intro_badge": {
+                    "ref": "field_service_intro_badge",
+                    "type": "text",
+                    "value": "Hair Removal"
+                },
+                "service_intro_heading": {
+                    "ref": "field_service_intro_heading",
+                    "type": "text",
+                    "value": "Remove your unwanted hair in safe, fast & effective way!"
+                },
+                "service_intro_paragraph_1": {
+                    "ref": "field_service_intro_paragraph_1",
+                    "type": "textarea",
+                    "value": "Hair is composed of protein. The appearance can be a sign of age and health. It also protects the skin and head against trauma and UV light. Hair insulates the skin against temperature changes and is a barrier to foreign objects. All hair is dead protein. Depending on the locations, hair may grow on certain parts of the face and body that are not desirable."
+                },
+                "service_intro_paragraph_2": {
+                    "ref": "field_service_intro_paragraph_2",
+                    "type": "wysiwyg",
+                    "value": ""
+                },
+                "service_sections_0_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Waxing"
+                },
+                "service_sections_0_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>It involves removing hair at all areas like underarm, upper lip, arm, leg, bikini etc. This method works by applying wax to the skin, which sticks to hairs. The wax is then quickly ripped off (some wax need to go with cloth strip, some without), pulling the hairs out with it.</p><p>The procedure is relatively quick, so even larger areas like the legs can be waxed in a trivial amount of time. However, because the wax needs to be able to stick to the hair, hair needs to be at least a quarter of an inch long before waxing.</p><p>This means that hair needs to be given some time to grow out between waxes. It usually takes about two to four weeks for hair to grow back. Waxing is a more economical way for hair removal.</p>"
+                },
+                "service_sections_0_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "0"
+                },
+                "service_sections_1_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Long Term Hair Removal"
+                },
+                "service_sections_1_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>It is to use the Photopneumatic therapy. During the treatment, a hand piece is gently placed on the skin. In a fraction of a second, a vacuum gently draws the skin into the treatment tip bringing the targets such as hair follicles closer to the skin’s surface.</p><p>A painless light is applied that sends highly efficient photons to the target at 4-5 times the standard rate. Because the hair follicles are closer to the light, a lower energy can be used, providing an overall safer, painless procedure that’s extremely fast and effective.</p><p>We recommend typically 6-12 treatments to achieve most effective result to achieve average hair reduction of up to 88%. Our clients are extremely satisfied with the treatment. Overall, this therapy offers a safe, rapid and effective method for long-term hair reduction.</p>"
+                },
+                "service_sections": {
+                    "ref": "field_service_sections",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "service_hero_image": {
+                    "ref": "field_service_hero_image",
+                    "type": "image",
+                    "value": "307"
+                },
+                "service_hero_badge": {
+                    "ref": "field_service_hero_badge",
+                    "type": "text",
+                    "value": "Impression Beauty"
+                },
+                "service_hero_float_badge": {
+                    "ref": "field_service_hero_float_badge",
+                    "type": "text",
+                    "value": "Since 1994"
+                },
+                "service_hero_btn1_text": {
+                    "ref": "field_service_hero_btn1_text",
+                    "type": "text",
+                    "value": "View Treatments"
+                },
+                "service_hero_btn1_link": {
+                    "ref": "field_service_hero_btn1_link",
+                    "type": "text",
+                    "value": "#treatments"
+                },
+                "service_hero_btn2_text": {
+                    "ref": "field_service_hero_btn2_text",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_hero_btn2_link": {
+                    "ref": "field_service_hero_btn2_link",
+                    "type": "text",
+                    "value": "#consultation"
+                },
+                "service_process_heading": {
+                    "ref": "field_service_process_heading",
+                    "type": "text",
+                    "value": "How It Works"
+                },
+                "service_process_subheading": {
+                    "ref": "field_service_process_subheading",
+                    "type": "text",
+                    "value": "A simple, comfortable process from consultation to results."
+                },
+                "service_cta_badge": {
+                    "ref": "field_service_cta_badge",
+                    "type": "text",
+                    "value": "Get Started Today"
+                },
+                "service_cta_heading": {
+                    "ref": "field_service_cta_heading",
+                    "type": "text",
+                    "value": "Book Your Free Consultation"
+                },
+                "service_cta_text": {
+                    "ref": "field_service_cta_text",
+                    "type": "textarea",
+                    "value": "Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly."
+                },
+                "service_cta_phone_text": {
+                    "ref": "field_service_cta_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "service_cta_phone_link": {
+                    "ref": "field_service_cta_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "service_cta_whatsapp_text": {
+                    "ref": "field_service_cta_whatsapp_text",
+                    "type": "text",
+                    "value": "WhatsApp Us"
+                },
+                "service_cta_whatsapp_link": {
+                    "ref": "field_service_cta_whatsapp_link",
+                    "type": "url",
+                    "value": "https://wa.me/6598678787"
+                },
+                "service_cta_hours": {
+                    "ref": "field_service_cta_hours",
+                    "type": "text",
+                    "value": "Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm"
+                },
+                "service_hero_subtitle": {
+                    "ref": "field_service_hero_subtitle",
+                    "type": "textarea",
+                    "value": "Remove unwanted hair the safe, fast and effective way, with waxing or long-term hair removal."
+                },
+                "service_stats_0_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30+"
+                },
+                "service_stats_0_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Years Experience"
+                },
+                "service_stats_1_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "Up to 88%"
+                },
+                "service_stats_1_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Hair Reduction"
+                },
+                "service_stats_2_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "6–12"
+                },
+                "service_stats_2_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Sessions Recommended"
+                },
+                "service_stats_3_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "5&#9733;"
+                },
+                "service_stats_3_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Customer Rated"
+                },
+                "service_stats": {
+                    "ref": "field_service_stats",
+                    "type": "repeater",
+                    "value": "4"
+                },
+                "service_process_steps_0_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "01"
+                },
+                "service_process_steps_0_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_process_steps_0_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Tell us which areas you would like treated and we will recommend waxing or long-term hair removal."
+                },
+                "service_process_steps_1_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "02"
+                },
+                "service_process_steps_1_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Your Treatment"
+                },
+                "service_process_steps_1_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Waxing is quick, even for larger areas. Long-term hair removal uses a gentle, painless light."
+                },
+                "service_process_steps_2_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "03"
+                },
+                "service_process_steps_2_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Follow-up Sessions"
+                },
+                "service_process_steps_2_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "Long-term hair removal works best over 6–12 sessions. For waxing, hair needs 2–4 weeks to grow back between visits."
+                },
+                "service_process_steps": {
+                    "ref": "field_service_process_steps",
+                    "type": "repeater",
+                    "value": "3"
+                }
+            }
+        },
+        "mole-warts-removal": {
+            "title": "Mole &amp; Warts Removal",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-service-page.php",
+            "acf": {
+                "service_hero_badge": {
+                    "ref": "field_service_hero_badge",
+                    "type": "text",
+                    "value": "Impression Beauty"
+                },
+                "service_hero_subtitle": {
+                    "ref": "field_service_hero_subtitle",
+                    "type": "textarea",
+                    "value": "Get Rid of Your Skin Growth with Herbal Preparation Treatment that has produced More Than 6,000 Successful Cases"
+                },
+                "service_hero_image": {
+                    "ref": "field_service_hero_image",
+                    "type": "image",
+                    "value": "306"
+                },
+                "service_hero_float_badge": {
+                    "ref": "field_service_hero_float_badge",
+                    "type": "text",
+                    "value": "Since 1994"
+                },
+                "service_hero_btn1_text": {
+                    "ref": "field_service_hero_btn1_text",
+                    "type": "text",
+                    "value": "View Treatments"
+                },
+                "service_hero_btn1_link": {
+                    "ref": "field_service_hero_btn1_link",
+                    "type": "text",
+                    "value": "#treatments"
+                },
+                "service_hero_btn2_text": {
+                    "ref": "field_service_hero_btn2_text",
+                    "type": "text",
+                    "value": "Free Consultation"
+                },
+                "service_hero_btn2_link": {
+                    "ref": "field_service_hero_btn2_link",
+                    "type": "text",
+                    "value": "#consultation"
+                },
+                "service_stats_0_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "30+"
+                },
+                "service_stats_0_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Years Experience"
+                },
+                "service_stats_1_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "6,000+"
+                },
+                "service_stats_1_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Successful Cases"
+                },
+                "service_stats_2_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "100%"
+                },
+                "service_stats_2_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Herbal & Natural"
+                },
+                "service_stats_3_number": {
+                    "ref": "field_service_stat_number",
+                    "type": "text",
+                    "value": "5★"
+                },
+                "service_stats_3_label": {
+                    "ref": "field_service_stat_label",
+                    "type": "text",
+                    "value": "Customer Rated"
+                },
+                "service_stats": {
+                    "ref": "field_service_stats",
+                    "type": "repeater",
+                    "value": "4"
+                },
+                "service_intro_image": {
+                    "ref": "field_service_intro_image",
+                    "type": "image",
+                    "value": "289"
+                },
+                "service_intro_badge": {
+                    "ref": "field_service_intro_badge",
+                    "type": "text",
+                    "value": "Look ! Check !"
+                },
+                "service_intro_heading": {
+                    "ref": "field_service_intro_heading",
+                    "type": "text",
+                    "value": "Do you have any of the following Skin Growths?"
+                },
+                "service_intro_paragraph_1": {
+                    "ref": "field_service_intro_paragraph_1",
+                    "type": "textarea",
+                    "value": "There are many types of skin tumors / growths. Some of them are harmless and need no treatment. These are called benign tumors. Some are cancerous and must be removed early. These are called malignant tumors. What are some of the benign skin tumors / growths?"
+                },
+                "service_intro_paragraph_2": {
+                    "ref": "field_service_intro_paragraph_2",
+                    "type": "wysiwyg",
+                    "value": ""
+                },
+                "service_intro_checks": {
+                    "ref": "field_service_intro_checks",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_audience_heading": {
+                    "ref": "field_service_audience_heading",
+                    "type": "text",
+                    "value": "Who Is This For?"
+                },
+                "service_audience_subheading": {
+                    "ref": "field_service_audience_subheading",
+                    "type": "text",
+                    "value": "Treatments designed for every concern and skin type."
+                },
+                "service_audience_cards": {
+                    "ref": "field_service_audience_cards",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_treatments_heading": {
+                    "ref": "field_service_treatments_heading",
+                    "type": "text",
+                    "value": "Recommended Treatments"
+                },
+                "service_treatments_subheading": {
+                    "ref": "field_service_treatments_subheading",
+                    "type": "text",
+                    "value": "Carefully curated procedures for visible, lasting results."
+                },
+                "service_treatments": {
+                    "ref": "field_service_treatments",
+                    "type": "repeater",
+                    "value": ""
+                },
+                "service_process_heading": {
+                    "ref": "field_service_process_heading",
+                    "type": "text",
+                    "value": "Over 6,000 Successful Cases Choose Herbal Preparation Treatment"
+                },
+                "service_process_subheading": {
+                    "ref": "field_service_process_subheading",
+                    "type": "text",
+                    "value": "Herbal Preparation Treatment is a revolutionary methods on mole and warts removal technology in Singapore. There’s no chemical involved. The ingredients we used are all herbal, and they are easily absorbed into our skin. The herbal will self-penetrate and the fats deposit will be self-removed within 2 weeks. There are a total of 2 appointments:"
+                },
+                "service_process_steps_0_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "01"
+                },
+                "service_process_steps_0_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "First Appointment"
+                },
+                "service_process_steps_0_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "You will be given a full consultation and analysis of the entire removal process. After which, we will apply the herbal ingredients on the area you want to remove that only takes about 5 – 15 minutes. The entire session should be less than 60 minutes."
+                },
+                "service_process_steps_1_number": {
+                    "ref": "field_service_step_number",
+                    "type": "text",
+                    "value": "02"
+                },
+                "service_process_steps_1_title": {
+                    "ref": "field_service_step_title",
+                    "type": "text",
+                    "value": "Second Appointment"
+                },
+                "service_process_steps_1_description": {
+                    "ref": "field_service_step_desc",
+                    "type": "textarea",
+                    "value": "After 2 weeks, you will be invited back again for a full review of the former mole or warts area. This is to ensure there is no infection or discharge in that area, which only happens in rare cases. The entire session should be less than 30 minutes."
+                },
+                "service_process_steps": {
+                    "ref": "field_service_process_steps",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "service_cta_badge": {
+                    "ref": "field_service_cta_badge",
+                    "type": "text",
+                    "value": "Get Started Today"
+                },
+                "service_cta_heading": {
+                    "ref": "field_service_cta_heading",
+                    "type": "text",
+                    "value": "Book Your Free Consultation"
+                },
+                "service_cta_text": {
+                    "ref": "field_service_cta_text",
+                    "type": "textarea",
+                    "value": "Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly."
+                },
+                "service_cta_phone_text": {
+                    "ref": "field_service_cta_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "service_cta_phone_link": {
+                    "ref": "field_service_cta_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "service_cta_whatsapp_text": {
+                    "ref": "field_service_cta_whatsapp_text",
+                    "type": "text",
+                    "value": "WhatsApp Us"
+                },
+                "service_cta_whatsapp_link": {
+                    "ref": "field_service_cta_whatsapp_link",
+                    "type": "url",
+                    "value": "https://wa.me/6598678787"
+                },
+                "service_cta_hours": {
+                    "ref": "field_service_cta_hours",
+                    "type": "text",
+                    "value": "Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm"
+                },
+                "service_sections_0_items_0_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Mole"
+                },
+                "service_sections_0_items_0_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "Clusters of melanin cells, called moles, a nevocytic nevus; the term is also used to designate a pigmented fleshly growth of the skin. It may appear in single or in groups and can be elevated or flat at any part of the body. Most of the moles prove to be benign. But early removal may prevent them from developing into cancer at some future date. Most of the moles make their appearance at sensitive parts of the body and requires special medical attention if they become painful, if they itch, or if they suddenly change in size, shape or color."
+                },
+                "service_sections_0_items_1_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Wart"
+                },
+                "service_sections_0_items_1_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "A viral infection caused by the Papilloma virus. These growths are caused by a virus infection of the epidermis. It can also be non-viral in origin called senile wart. (seborrhic keratoses) It has a tendency to spread unless treated early. Warts can be painful when found on the soles of the feet. In this location, they are known as plantar warts. Warts are often transmitted from one member of the family to another. Warts can spread by scratching, or by shaving, and by brushing the hair. Because warts can spread rapidly on face or around the neck, to painful areas, such as the area around the fingernails, and because they may become disfiguring, it is best to remove them at early stage whenever they appear."
+                },
+                "service_sections_0_items_2_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "290"
+                },
+                "service_sections_0_items_2_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Seborrheic keratosis"
+                },
+                "service_sections_0_items_2_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "These are brown to black growths on the face and body. They are usually present on the skin of people over 40 years old. The tumors appear as if they are “stuck-on” the skin. Sometimes, they can be very dark. The surface is usually rough and can be greasy. They may be multiple, distributed on the face, body and limbs. They can be left alone but may be removed by minor surgery for cosmetic reasons."
+                },
+                "service_sections_0_items_3_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "291"
+                },
+                "service_sections_0_items_3_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "(Broken Capallies) Spider Naevus"
+                },
+                "service_sections_0_items_3_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "They are seen as dilated arterial with radiating vessels, hence named “spider”. It can be quite noticeable. Can be due to raised level of oestrogen and may occur in pregnancy. In male cases, it is usually due to cirrhosis of liver. It also commonly appears during aging process. They can be caused by trauma to skin. Removal requires specialized treatment, i.e. advanced beauty treatment using diathermy to cauterize vessels."
+                },
+                "service_sections_0_items_4_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "292"
+                },
+                "service_sections_0_items_4_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Xanthelasma"
+                },
+                "service_sections_0_items_4_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "These are raised yellow-colored patches appearing on the eyelids. They represent oily deposits in the skin. People with these lesions should see a doctor to see if they have any underlying medical problem that needs treatment. The lesions can be removed by minor surgery."
+                },
+                "service_sections_0_items_5_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "293"
+                },
+                "service_sections_0_items_5_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Fat Deposits (Syringomas)"
+                },
+                "service_sections_0_items_5_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "These are benign growths of the sweat ducts. They appear as small skin-colored lumps usually on the eyelids and cheeks. They are painless. They can be removed by minor surgery for cosmetic reasons."
+                },
+                "service_sections_0_items_6_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "294"
+                },
+                "service_sections_0_items_6_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Skin tags (Cutaneous papilloma / acrochordon)"
+                },
+                "service_sections_0_items_6_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "These are skin colored lumps that grow out of the skin. They are soft and usually found on the neck, armpits and body."
+                },
+                "service_sections_0_items_7_image": {
+                    "ref": "field_service_section_item_image",
+                    "type": "image",
+                    "value": "295"
+                },
+                "service_sections_0_items_7_title": {
+                    "ref": "field_service_section_item_title",
+                    "type": "text",
+                    "value": "Sebaceous hyperplasia"
+                },
+                "service_sections_0_items_7_text": {
+                    "ref": "field_service_section_item_text",
+                    "type": "textarea",
+                    "value": "They are enlarged oil glands on the face which appear as small yellow irregular lumps with an opening in the centre. They are often seen on the face of elderly persons. They can be removed by minor surgery."
+                },
+                "service_sections_0_items": {
+                    "ref": "field_service_section_items",
+                    "type": "repeater",
+                    "value": "8"
+                },
+                "service_sections_1_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "How are Benign Growths Treated?"
+                },
+                "service_sections_1_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Most tumors / growths can be destroyed by electro surgery or laser surgery. Electro surgery is a procedure whereby the tumors are destroyed using a needle attached to an electric current.</p><p>When the current is switched on, the electrical energy is converted to heat energy which will burn off the tissue. Laser surgery removes skin tumors by high energy light. These procedures are painless under local anesthesia. Larger tumors are excised with a surgical blade.</p><p>Herbal cream preparation was used for the natural non-surgical method. It is an effective alternative treatment of cutaneous warts, moles and other skin growths that requires only one application of the herbal cream with minimal patient discomfort and less scar formation. The cream rapidly penetrates and cauterizes deeply within the target area without any harmful effect of cautery.</p>"
+                },
+                "service_sections_1_gallery": {
+                    "ref": "field_service_section_gallery",
+                    "type": "gallery",
+                    "value": [
+                        "296",
+                        "297"
+                    ]
+                },
+                "service_sections_2_heading": {
+                    "ref": "field_service_section_heading",
+                    "type": "text",
+                    "value": "Typical Mole & Warts Removal Process"
+                },
+                "service_sections_2_body": {
+                    "ref": "field_service_section_body",
+                    "type": "wysiwyg",
+                    "value": "<p>Herbal cream preparation was used for the natural non-surgical method. It is an effective alternative treatment of cutaneous warts, moles and other skin growths that requires only one application of the herbal cream with minimal patient discomfort and less scar formation. The cream rapidly penetrated and cauterizes deeply within the affected but devoid the excessive destructive effect of cautery.</p>"
+                },
+                "service_sections_2_image": {
+                    "ref": "field_service_section_image",
+                    "type": "image",
+                    "value": "298"
+                },
+                "service_sections": {
+                    "ref": "field_service_sections",
+                    "type": "repeater",
+                    "value": "3"
+                }
+            }
+        },
+        "general": {
+            "title": "General",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-faq-page.php",
+            "acf": {
+                "faq_hero_badge": {
+                    "ref": "field_faq_hero_badge",
+                    "type": "text",
+                    "value": "Help Centre"
+                },
+                "faq_hero_title": {
+                    "ref": "field_faq_hero_title",
+                    "type": "text",
+                    "value": "Frequently Asked"
+                },
+                "faq_hero_highlight": {
+                    "ref": "field_faq_hero_highlight",
+                    "type": "text",
+                    "value": "Questions"
+                },
+                "faq_hero_intro": {
+                    "ref": "field_faq_hero_intro",
+                    "type": "wysiwyg",
+                    "value": "Answers to common questions about visiting Impression Beauty at Clarke Quay Central. Not sure about something? Call us on 6333 9093, and we'll be happy to help."
+                },
+                "faq_help_badge": {
+                    "ref": "field_faq_help_badge",
+                    "type": "text",
+                    "value": "Still Unsure?"
+                },
+                "faq_help_heading": {
+                    "ref": "field_faq_help_heading",
+                    "type": "text",
+                    "value": "We're Here to Help"
+                },
+                "faq_help_text": {
+                    "ref": "field_faq_help_text",
+                    "type": "wysiwyg",
+                    "value": "Can't find the answer you're looking for? Call us or drop by for a free skin consultation."
+                },
+                "faq_help_phone_text": {
+                    "ref": "field_faq_help_phone_text",
+                    "type": "text",
+                    "value": "📞 +65 6333 9093"
+                },
+                "faq_help_phone_link": {
+                    "ref": "field_faq_help_phone_link",
+                    "type": "text",
+                    "value": "tel:+6563339093"
+                },
+                "faq_help_button_text": {
+                    "ref": "field_faq_help_button_text",
+                    "type": "text",
+                    "value": "Contact Us"
+                },
+                "faq_help_button_link": {
+                    "ref": "field_faq_help_button_link",
+                    "type": "url",
+                    "value": "https://impressionbeauty.test/?page_id=47"
+                },
+                "faq_tabs_0_name": {
+                    "ref": "field_faq_tab_name",
+                    "type": "text",
+                    "value": "General"
+                },
+                "faq_tabs_0_image": {
+                    "ref": "field_faq_tab_image",
+                    "type": "image",
+                    "value": ""
+                },
+                "faq_tabs_0_groups_0_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": "Appointments and visiting"
+                },
+                "faq_tabs_0_groups_0_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "How do I make or change an appointment?"
+                },
+                "faq_tabs_0_groups_0_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Call us on +65 6333 9093 during opening hours, or email imp@impressionbeauty.com."
+                },
+                "faq_tabs_0_groups_0_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "8"
+                },
+                "faq_tabs_0_groups_1_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": "Payment and packages"
+                },
+                "faq_tabs_0_groups_1_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "What payment methods do you accept?"
+                },
+                "faq_tabs_0_groups_1_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Cash, NETS, and all major credit and debit cards."
+                },
+                "faq_tabs_0_groups_1_questions_1_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Do you offer instalment plans?"
+                },
+                "faq_tabs_0_groups_1_questions_1_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Yes"
+                },
+                "faq_tabs_0_groups_1_questions_2_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can I buy the products you use in the salon?"
+                },
+                "faq_tabs_0_groups_1_questions_2_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Yes, selected products are available through our online shop and at the salon."
+                },
+                "faq_tabs_0_groups_1_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "3"
+                },
+                "faq_tabs_0_groups": {
+                    "ref": "field_faq_groups",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "faq_tabs_1_name": {
+                    "ref": "field_faq_tab_name",
+                    "type": "text",
+                    "value": "Face Care"
+                },
+                "faq_tabs_1_image": {
+                    "ref": "field_faq_tab_image",
+                    "type": "image",
+                    "value": "231"
+                },
+                "faq_tabs_1_groups_0_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": ""
+                },
+                "faq_tabs_1_groups_0_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Are facials suitable for all skin types?"
+                },
+                "faq_tabs_1_groups_0_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Most skin types can have a facial, but the products and method are chosen to suit your skin. Your consultant will check your skin first."
+                },
+                "faq_tabs_1_groups_0_questions_1_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can I have a facial if I have a skin allergy?"
+                },
+                "faq_tabs_1_groups_0_questions_1_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "It depends on the type of allergy, and a facial is usually not advisable if your skin is reacting. Please see a doctor or dermatologist first. Let us know about any allergies before your treatment."
+                },
+                "faq_tabs_1_groups_0_questions_2_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can broken veins on my face be removed?"
+                },
+                "faq_tabs_1_groups_0_questions_2_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Small visible veins have different causes, and results vary. Our consultant can look at your skin and suggest how to care for it. If the veins are new, painful or spreading, please see a doctor."
+                },
+                "faq_tabs_1_groups_0_questions_3_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Should I wear makeup to my facial?"
+                },
+                "faq_tabs_1_groups_0_questions_3_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "No need to remove it beforehand. We'll cleanse your skin as part of the treatment."
+                },
+                "faq_tabs_1_groups_0_questions_4_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can I have treatments if I'm pregnant?"
+                },
+                "faq_tabs_1_groups_0_questions_4_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Some treatments are not suitable during pregnancy. Please tell us before your appointment, and check with your doctor if you're unsure."
+                },
+                "faq_tabs_1_groups_0_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "5"
+                },
+                "faq_tabs_1_groups": {
+                    "ref": "field_faq_groups",
+                    "type": "repeater",
+                    "value": "1"
+                },
+                "faq_tabs_2_name": {
+                    "ref": "field_faq_tab_name",
+                    "type": "text",
+                    "value": "Body Care"
+                },
+                "faq_tabs_2_image": {
+                    "ref": "field_faq_tab_image",
+                    "type": "image",
+                    "value": "232"
+                },
+                "faq_tabs_2_groups_0_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": ""
+                },
+                "faq_tabs_2_groups_0_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can stretch marks be removed?"
+                },
+                "faq_tabs_2_groups_0_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Results depend on the age and colour of the marks and differ from person to person. Our consultant will examine the area and give you realistic advice before you decide on anything."
+                },
+                "faq_tabs_2_groups_0_questions_1_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "What should I wear for a body treatment?"
+                },
+                "faq_tabs_2_groups_0_questions_1_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Wear something loose and comfortable. We'll provide what you need for the treatment."
+                },
+                "faq_tabs_2_groups_0_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "2"
+                },
+                "faq_tabs_2_groups": {
+                    "ref": "field_faq_groups",
+                    "type": "repeater",
+                    "value": "1"
+                },
+                "faq_tabs_3_name": {
+                    "ref": "field_faq_tab_name",
+                    "type": "text",
+                    "value": "Hair Removal"
+                },
+                "faq_tabs_3_image": {
+                    "ref": "field_faq_tab_image",
+                    "type": "image",
+                    "value": "233"
+                },
+                "faq_tabs_3_groups_0_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": ""
+                },
+                "faq_tabs_3_groups_0_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "How old must I be?"
+                },
+                "faq_tabs_3_groups_0_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "You must be 18 or above."
+                },
+                "faq_tabs_3_groups_0_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "1"
+                },
+                "faq_tabs_3_groups": {
+                    "ref": "field_faq_groups",
+                    "type": "repeater",
+                    "value": "1"
+                },
+                "faq_tabs_4_name": {
+                    "ref": "field_faq_tab_name",
+                    "type": "text",
+                    "value": "Skin Growth Removal"
+                },
+                "faq_tabs_4_image": {
+                    "ref": "field_faq_tab_image",
+                    "type": "image",
+                    "value": "234"
+                },
+                "faq_tabs_4_groups_0_label": {
+                    "ref": "field_faq_group_label",
+                    "type": "text",
+                    "value": "Skin growth consultation (moles, warts and similar)"
+                },
+                "faq_tabs_4_groups_0_questions_0_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "How do you assess a skin growth?"
+                },
+                "faq_tabs_4_groups_0_questions_0_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Our consultant will first look at the area and discuss your concerns. We cannot diagnose skin conditions. If a mole has changed in size, shape or colour, or is itchy, painful or bleeding, please see a doctor before any treatment."
+                },
+                "faq_tabs_4_groups_0_questions_1_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "What method do you use?"
+                },
+                "faq_tabs_4_groups_0_questions_1_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "We use a herbal-based preparation. The consultant will explain the method and what to expect before you decide to go ahead."
+                },
+                "faq_tabs_4_groups_0_questions_2_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "How much does it cost?"
+                },
+                "faq_tabs_4_groups_0_questions_2_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "The cost depends on the number, size, and type of the growths. Please call us or book a consultation for a quote."
+                },
+                "faq_tabs_4_groups_0_questions_3_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "My mole is flat. Can it be treated?"
+                },
+                "faq_tabs_4_groups_0_questions_3_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Please come in so our consultant can look at it. Flat and raised moles differ, and we'll advise whether it's suitable."
+                },
+                "faq_tabs_4_groups_0_questions": {
+                    "ref": "field_faq_questions",
+                    "type": "repeater",
+                    "value": "6"
+                },
+                "faq_tabs_4_groups": {
+                    "ref": "field_faq_groups",
+                    "type": "repeater",
+                    "value": "1"
+                },
+                "faq_tabs": {
+                    "ref": "field_faq_tabs",
+                    "type": "repeater",
+                    "value": "5"
+                },
+                "faq_tabs_0_groups_0_questions_1_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can I walk in without an appointment?"
+                },
+                "faq_tabs_0_groups_0_questions_1_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "We recommend booking ahead so we can set aside enough time for you."
+                },
+                "faq_tabs_0_groups_0_questions_2_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "What are your opening hours?"
+                },
+                "faq_tabs_0_groups_0_questions_2_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Monday to Friday: 11:30 am - 8:45 pm<br>\nSaturday and Sunday: 10:30 am - 6:30 pm.<br>\nPublic holidays: Closed"
+                },
+                "faq_tabs_0_groups_0_questions_3_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Where are you, and how do I get there?"
+                },
+                "faq_tabs_0_groups_0_questions_3_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "We're at Clarke Quay Central, 6 Eu Tong Sen Road, #04-75, Singapore 059817. The mall is directly linked to Clarke Quay MRT station (North East Line)."
+                },
+                "faq_tabs_0_groups_0_questions_4_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Should I arrive early?"
+                },
+                "faq_tabs_0_groups_0_questions_4_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Please come about 10 minutes before your appointment so you can settle in and fill in a short form. If you're running late, give us a call so we can adjust."
+                },
+                "faq_tabs_0_groups_0_questions_5_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Do you accept male customers?"
+                },
+                "faq_tabs_0_groups_0_questions_5_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Yes. We serve men and women of all ages."
+                },
+                "faq_tabs_0_groups_0_questions_6_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Do you have rooms for couples?"
+                },
+                "faq_tabs_0_groups_0_questions_6_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Yes, we do have rooms for couples."
+                },
+                "faq_tabs_0_groups_0_questions_7_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "What does the skin analysis cover?"
+                },
+                "faq_tabs_0_groups_0_questions_7_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Our consultant will look at your skin, tell you your skin type, explain how to care for it at home, and suggest which treatments may suit you."
+                },
+                "faq_tabs_4_groups_0_questions_4_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "Can you treat corns?"
+                },
+                "faq_tabs_4_groups_0_questions_4_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "Please get it assessed first. If you have diabetes or circulation problems, see your doctor before any treatment."
+                },
+                "faq_tabs_4_groups_0_questions_5_question": {
+                    "ref": "field_faq_question",
+                    "type": "text",
+                    "value": "How long does the treatment take, and how long to heal?"
+                },
+                "faq_tabs_4_groups_0_questions_5_answer": {
+                    "ref": "field_faq_answer",
+                    "type": "wysiwyg",
+                    "value": "This depends on the number and size of the growths and how your skin heals. Your consultant will give you an estimate and aftercare instructions on the day."
+                }
+            }
+        },
+        "privacy-policy": {
+            "title": "Privacy Policy",
+            "status": "publish",
+            "content": "<p><em>Last updated: [27 Oct 2026]</em></p><p>Impression Beauty (&quot;we&quot;, &quot;us&quot;) respects your privacy. This policy explains what personal data we collect, why we collect it, how we look after it, and what choices you have. It applies when you visit our website, book an appointment, visit our salon at Clarke Quay Central, or buy from our online shop. [CONFIRM registered company name and UEN]</p><h3>1. What personal data we collect</h3><p>Depending on how you deal with us, we may collect:</p><ul><li>Contact details: your name, mobile number, email address and, for shop orders, your delivery address.</li><li>Appointment details: the services you book, dates and times, and your preferences.</li><li>Health and skin information: details you share with us so we can advise you and carry out treatments safely, such as allergies, skin conditions, pregnancy, medication, and relevant medical history.</li><li>Treatment records: notes on your consultations, treatments and aftercare advice.</li><li>Payment details: for online orders, payments are processed by our payment provider. We do not store your full card number. [CONFIRM payment provider]</li><li>Website data: technical information such as your IP address, browser type, pages visited and cookie data.</li><li>Messages: what you send us by phone, email, WhatsApp, social media or our website forms. [CONFIRM channels used]</li></ul><p>We do not ask for your NRIC number unless the law requires it. [CONFIRM]</p><h3>2. Why we collect and use your data</h3><p>We use your personal data to:</p><ul><li>book, confirm, change and remind you of appointments</li><li>assess your skin and recommend suitable treatments</li><li>carry out treatments safely, and keep a record of them</li><li>process payments and online shop orders, including delivery and returns</li><li>respond to your questions and feedback</li><li>send you information about promotions, new services and products, where you have agreed to receive it</li><li>improve our website and services</li><li>meet legal and regulatory requirements, and protect our legal rights</li></ul><h3>3. Consent</h3><p>We collect, use and disclose your personal data with your consent, or where the PDPA allows us to do so without it. By giving us your details, making a booking or using our services, you agree to the uses described in this policy. You can withdraw your consent at any time (see Section 9).</p><h3>4. Marketing messages</h3><p>We will send you marketing messages by SMS, call, WhatsApp, email or other channels only with your consent, and we comply with Singapore&#039;s Do Not Call rules. Every marketing message will include a way to opt out, and you can also contact us at any time to stop receiving them. [CONFIRM which channels are used for marketing]</p><h3>5. Who we share your data with</h3><p>We do not sell your personal data. We may share it with:</p><ul><li>service providers who help us run our business, such as website hosting, booking and payment systems, delivery partners and IT support, who must protect your data and use it only for our purposes</li><li>professional advisers, such as accountants and lawyers</li><li>government agencies and regulators, where the law requires or allows it</li><li>another party, if our business is sold or restructured, who would continue to use your data for the same purposes</li></ul><p>If you tell us to share your data with someone, such as a doctor, we will do so as you instruct.</p><h3>6. Transfers outside Singapore</h3><p>Some of our service providers, such as website hosting, email or analytics tools, may store or process data outside Singapore. When this happens, we take steps to make sure your data receives a standard of protection comparable to the PDPA. [CONFIRM hosting location and tools used]</p><h3>7. Cookies and website tools</h3><p>Our website uses cookies and similar tools to make the site work, remember your cart, understand how visitors use it, and measure our advertising. We use: [CONFIRM: for example, Google Analytics, Google Ads and Meta Pixel; list what is actually installed]</p><p>You can switch off cookies in your browser settings, but parts of the website, such as the shopping cart, may not work properly without them.</p><h3>8. How long we keep your data</h3><p>We keep your personal data only as long as we need it for the purposes above, or as the law or our business needs require. [CONFIRM retention period for client and treatment records] When we no longer need it, we delete it or anonymise it.</p><h3>9. Your rights</h3><p>You may contact us at any time to:</p><ul><li>ask for access to the personal data we hold about you, and how we have used or shared it in the past year</li><li>ask us to correct data that is wrong or incomplete</li><li>withdraw your consent to our collecting, using or sharing your data. We will tell you what this may mean for the services we can provide, for example, we may not be able to book a treatment without your health information.</li></ul><p>We may need to verify your identity first, and we may charge a reasonable fee for access requests. We will tell you the amount before we proceed. We aim to respond within 30 days. [CONFIRM]</p><h3>10. How we protect your data</h3><p>We use reasonable security measures to protect your data against unauthorised access, loss or misuse. These include limiting access to those who need it and securing our systems and records. [CONFIRM: for example, password-protected systems and locked storage for paper records] No system is completely secure. If a data breach is likely to cause you significant harm, we will notify the Personal Data Protection Commission and you, as the law requires.</p><h3>11. Clients under 18</h3><p>If you are under 18, please have a parent or guardian make your booking and give consent on your behalf. [CONFIRM policy]</p><h3>12. Links to other websites</h3><p>Our website may link to other websites, such as our social media pages. We are not responsible for how they handle your data, so please read their privacy policies.</p><h3>13. Changes to this policy</h3><p>We may update this policy from time to time. The date at the top shows when it was last changed. We encourage you to check it occasionally.</p><h3>14. Contact our Data Protection Officer</h3><p>For any questions, access or correction requests, or to withdraw consent, please contact:</p><p>Data Protection Officer, Impression Beauty Clarke Quay Central, 6 Eu Tong Sen Road, #04-75, Singapore 059817 Tel: 6333 9093 Email: [CONFIRM DPO email]</p>",
+            "excerpt": "",
+            "template": "",
+            "acf": []
+        },
+        "terms-and-conditions": {
+            "title": "Terms and Conditions",
+            "status": "publish",
+            "content": "<p><em>Last updated: [27 Oct 2026]</em></p><p>Welcome to Impression Beauty. By using this website, booking an appointment, or buying from us, you agree to these terms. Please read them and call us on 6333 9093 if anything is unclear.</p><h3>1. About us</h3><p>Impression Beauty (&quot;we&quot;, &quot;us&quot;) is a skin care salon and beauty wellness centre at Clarke Quay Central, 6 Eu Tong Sen Road, #04-75, Singapore 059817, serving clients since 1994. [CONFIRM registered company name and UEN]</p><h3>2. Using this website</h3><ul><li>The information on this website is for general information only. It is not medical advice and does not replace a consultation with a doctor.</li><li>Photos and descriptions are for illustration. Treatment details, products and prices may change without notice.</li><li>Please do not misuse the website, attempt to disrupt it, or copy our content for commercial use without our written permission.</li></ul><h3>3. Consultations</h3><p>A consultation helps our consultant understand your skin and your goals. Our consultants are not doctors and cannot diagnose medical conditions. If we think you should see a doctor first, we will tell you, and we may ask you to do so before we proceed.</p><h3>4. Appointments</h3><ul><li>Please book by calling +65 6333 9093 or emailing imp@impressionbeauty.com. [CONFIRM email address]</li><li>To change or cancel, please let us know at least [CONFIRM: e.g. 24 hours] before your appointment.</li><li>If you are more than [CONFIRM: e.g. 15 minutes] late, we may need to shorten or reschedule your treatment.</li><li>[CONFIRM: late cancellation or no-show fee, if any]</li></ul><h3>5. Your health and suitability</h3><p>Please tell us before your treatment about anything that may affect it, including:</p><ul><li>allergies or sensitive skin</li><li>pregnancy or breastfeeding</li><li>medical conditions or ongoing treatment</li><li>medication you are taking</li></ul><p>We may decline or postpone a treatment if we believe it is not suitable for you at that time. Hair removal is available to clients aged 18 and above. [CONFIRM: policy for clients under 18 on other services, and whether guardian consent is needed]</p><h3>6. Results</h3><p>Results and healing time differ from person to person, depending on your skin, your health and how well you follow our aftercare advice. We cannot guarantee a particular result. Our consultant will explain what to expect before you decide to go ahead.</p><h3>7. Aftercare</h3><p>We will give you aftercare advice after your treatment. Please follow it closely, and contact us or see a doctor if you have any unusual reaction, such as persistent pain, swelling, bleeding or signs of infection.</p><h3>8. Prices and payment</h3><ul><li>Prices are in Singapore dollars. [CONFIRM: whether prices include GST]</li><li>We accept cash, NETS, and major credit and debit cards.</li><li>Prices and promotions may change. A promotion applies only for the dates stated and cannot be combined with other offers unless we say so. [CONFIRM]</li><li>[CONFIRM: instalment plans, if offered]</li></ul><h3>9. Treatment packages and vouchers</h3><p>[CONFIRM all of this section with the client]</p><ul><li>Validity period for packages and vouchers.</li><li>Whether packages or vouchers can be shared or transferred (for example, bought for a friend).</li><li>Refund and expiry terms for unused sessions.</li><li>What happens to a package if a treatment is no longer suitable for health reasons.</li></ul><h3>10. Online shop</h3><p>Please replace this section with the shop&#039;s real terms: [CONFIRM]</p><ul><li>Delivery areas, charges, and delivery times.</li><li>Return and exchange policy for unopened and opened products.</li><li>How to report a damaged or wrong item, and within how many days.</li><li>Payment methods accepted online.</li></ul><h3>11. Your personal data</h3><p>We collect and use your personal data, such as your name, contact details and relevant health information, to book appointments, provide treatments and contact you about them. We handle your data in line with Singapore&#039;s Personal Data Protection Act (PDPA). Please see our Privacy Policy for details, including how to contact us about your data. [CONFIRM: DPO contact and Privacy Policy page]</p><h3>12. Intellectual property</h3><p>The content of this website, including text, logos, images and videos, belongs to Impression Beauty or is used with permission. Please do not reproduce it without our written permission.</p><h3>13. Our responsibility</h3><p>We take reasonable care in providing our services. Nothing in these terms limits our liability where the law does not allow it, including for death or personal injury caused by our negligence. Otherwise, to the extent the law allows, we are not responsible for loss caused by events outside our reasonable control, or by your not giving us accurate health information or not following our advice. [CONFIRM wording with the client&#039;s lawyer]</p><h3>14. Changes to these terms</h3><p>We may update these terms from time to time. The date at the top shows when they were last changed. Using our services after an update means you accept the updated terms.</p><h3>15. Governing law</h3><p>The laws of Singapore govern these terms, and the Singapore courts have jurisdiction over any dispute.</p><h3>16. Contact us</h3><p>Impression Beauty, Clarke Quay Central, 6 Eu Tong Sen Road, #04-75, Singapore 059817 Tel: 6333 9093 / 6255 1126</p>",
+            "excerpt": "",
+            "template": "",
+            "acf": []
+        },
+        "promotions": {
+            "title": "Promotions",
+            "status": "publish",
+            "content": "",
+            "excerpt": "",
+            "template": "template-promotion-page.php",
+            "acf": {
+                "promo_badge": {
+                    "ref": "field_promo_badge",
+                    "type": "text",
+                    "value": "Limited Time Offers"
+                },
+                "promo_heading": {
+                    "ref": "field_promo_heading",
+                    "type": "text",
+                    "value": "Special Promotions"
+                },
+                "promotions_0_title": {
+                    "ref": "field_promotion_title",
+                    "type": "text",
+                    "value": "Natural Herbal Mole and Warts Removal Treatment"
+                },
+                "promotions_0_subtitle": {
+                    "ref": "field_promotion_subtitle",
+                    "type": "text",
+                    "value": "Exclusive 20% discount for First Time Trial"
+                },
+                "promotions_0_description": {
+                    "ref": "field_promotion_description",
+                    "type": "wysiwyg",
+                    "value": "<p><strong>Mole, Warts &amp; Fat Deposit Removal with Natural Herbal Treatment</strong></p><p>Usual price per mole: from $25<br>Usual price per wart: from $15</p><p>Get Rid of any skin growth concerns with our unique Herbal Preparation Treatment.</p><ul><li>More than 6,000 successful treatments to date</li><li>Painless treatment guaranteed</li><li>Natural non-surgical method</li><li>Minimal patient discomfort and less scar formation</li><li>No use of chemicals – ingredients used are 100% natural and easily absorbed into the skin</li><li>Equally effective if not more effective than typical procedures such as electro surgery or laser surgery</li></ul>"
+                },
+                "promotions_0_price": {
+                    "ref": "field_promotion_price",
+                    "type": "text",
+                    "value": "NOW until 31 May 2022 only – Enjoy 20% Discount for First Time Trial"
+                },
+                "promotions_1_image": {
+                    "ref": "field_promotion_image",
+                    "type": "image",
+                    "value": "301"
+                },
+                "promotions_1_title": {
+                    "ref": "field_promotion_title",
+                    "type": "text",
+                    "value": "Silk Protein Face Treatment + FREE Eye and Neck Treatment"
+                },
+                "promotions_1_description": {
+                    "ref": "field_promotion_description",
+                    "type": "wysiwyg",
+                    "value": "<p>Revive your youthfulness with Silk Protein Face Treatment, and give your skin the radiance and silky smoothness that it deserves.</p><p><strong>Effect</strong></p><ul><li>Calms and soothes sensitive skin</li><li>Replaces lost moisture and reduces redness.</li><li>Protect skin from harmful UV rays.</li><li>Allow your skin to shine through like “Silk”</li></ul>"
+                },
+                "promotions_1_price": {
+                    "ref": "field_promotion_price",
+                    "type": "text",
+                    "value": "Special 1st Trial @ $69 (UP. $206)"
+                },
+                "promotions_1_terms": {
+                    "ref": "field_promotion_terms",
+                    "type": "wysiwyg",
+                    "value": "<p><strong>Terms &amp; Conditions apply:</strong></p><ul><li>For new customer &amp; customers who have not visited us more than 12 months</li><li>For 1st trial only</li></ul>"
+                },
+                "promotions_2_image": {
+                    "ref": "field_promotion_image",
+                    "type": "image",
+                    "value": "302"
+                },
+                "promotions_2_title": {
+                    "ref": "field_promotion_title",
+                    "type": "text",
+                    "value": "Skin Shine Face Treatment"
+                },
+                "promotions_2_subtitle": {
+                    "ref": "field_promotion_subtitle",
+                    "type": "text",
+                    "value": "Activating & Increasing Cells Energy"
+                },
+                "promotions_2_description": {
+                    "ref": "field_promotion_description",
+                    "type": "wysiwyg",
+                    "value": "<p><strong>Effect</strong></p><ul><li>Softening &amp; removing dead skin</li><li>Stimulating blood circulation &amp; increasing cells metabolic rate</li><li>Balancing pH level &amp; increasing glow</li><li>Strengthening immune system</li><li>Anti-oxidant, cells repair &amp; whitening</li></ul>"
+                },
+                "promotions_2_price": {
+                    "ref": "field_promotion_price",
+                    "type": "text",
+                    "value": "Special 1st Trial @ $98 (UP. $394)"
+                },
+                "promotions_2_terms": {
+                    "ref": "field_promotion_terms",
+                    "type": "wysiwyg",
+                    "value": "<p><strong>Terms &amp; Conditions apply:</strong></p><ul><li>For new customer &amp; customers who have not visited us more than 12 months</li><li>For 1st trial only</li></ul>"
+                },
+                "promotions_3_image": {
+                    "ref": "field_promotion_image",
+                    "type": "image",
+                    "value": "303"
+                },
+                "promotions_3_title": {
+                    "ref": "field_promotion_title",
+                    "type": "text",
+                    "value": "De-stress Body Massage (60 Mins) + FREE Cupping"
+                },
+                "promotions_3_description": {
+                    "ref": "field_promotion_description",
+                    "type": "wysiwyg",
+                    "value": "<p>Enjoy the powerful benefits of a body massage. Relax, de-stress and forget your worries.</p><p><strong>Effect</strong></p><ul><li>Promotes deep relaxation and releases tension</li><li>Relieves mental &amp; physical fatigue</li><li>Reduces fat stored in your tissues</li></ul><p>Cupping originated thousands of years ago and has been extensively used in the treatment of many types of muscle tensions and common ailments.</p><ul><li>Enhances blood circulation</li><li>Starts the healing and regeneration process through the removal of toxin and dead cells</li><li>Reduces inflammation</li></ul>"
+                },
+                "promotions_3_price": {
+                    "ref": "field_promotion_price",
+                    "type": "text",
+                    "value": "Special 1st Trial @ $49 (UP. $80)"
+                },
+                "promotions_3_terms": {
+                    "ref": "field_promotion_terms",
+                    "type": "wysiwyg",
+                    "value": "<p><strong>Terms &amp; Conditions apply:</strong></p><ul><li>For new customer &amp; customers who have not visited us more than 12 months</li><li>For 1st trial only</li></ul>"
+                },
+                "promotions": {
+                    "ref": "field_promotions",
+                    "type": "repeater",
+                    "value": "4"
+                }
+            }
+        },
+        "news": {
+            "title": "News",
+            "status": "publish",
+            "content": "Check out our latest promos, pricing changes, and other updates from Impression Beauty.",
+            "excerpt": "",
+            "template": "template-news-page.php",
+            "acf": []
+        }
+    },
+    "posts": {
+        "special-promotions": {
+            "title": "Special Promotions",
+            "content": "<h2>Natural Herbal Mole and Warts Removal Treatment</h2>\n<p><strong>Exclusive 20% discount for First Time Trial</strong></p>\n<h3>Mole, Warts &amp; Fat Deposit Removal with Natural Herbal Treatment</h3>\n<ul>\n<li>Usual price per mole: from $25</li>\n<li>Usual price per wart: from $15</li>\n</ul>\n<p><strong>NOW until 31 May 2022 only – Enjoy 20% Discount for First Time Trial</strong></p>\n<p>Get Rid of any skin growth concerns with our unique Herbal Preparation Treatment.</p>\n<ul>\n<li>More than 6,000 successful treatments to date</li>\n<li>Painless treatment guaranteed</li>\n<li>Natural non-surgical method</li>\n<li>Minimal patient discomfort and less scar formation</li>\n<li>No use of chemicals – ingredients used are 100% natural and easily absorbed into the skin</li>\n<li>Equally effective if not more effective than typical procedures such as electro surgery or laser surgery</li>\n</ul>\n\n<h2>Silk Protein Face Treatment + FREE Eye and Neck Treatment</h2>\n<p>Revive your youthfulness with Silk Protein Face Treatment, and give your skin the radiance and silky smoothness that it deserves.</p>\n<h4>Effect</h4>\n<ul>\n<li>Calms and soothes sensitive skin</li>\n<li>Replaces lost moisture and reduces redness.</li>\n<li>Protect skin from harmful UV rays.</li>\n<li>Allow your skin to shine through like “Silk”</li>\n</ul>\n<p><strong>Special 1st Trial @ $69 (UP. $206)</strong></p>\n<p>Terms &amp; Conditions apply:</p>\n<ul>\n<li>For new customer &amp; customers who have not visited us more than 12 months</li>\n<li>For 1st trial only</li>\n</ul>\n\n<h2>Skin Shine Face Treatment</h2>\n<p>Activating &amp; Increasing Cells Energy</p>\n<h4>Effect</h4>\n<ul>\n<li>Softening &amp; removing dead skin</li>\n<li>Stimulating blood circulation &amp; increasing cells metabolic rate</li>\n<li>Balancing pH level &amp; increasing glow</li>\n<li>Strengthening immune system</li>\n<li>Anti-oxidant, cells repair &amp; whitening</li>\n</ul>\n<p><strong>Special 1st Trial @ $98 (UP. $394)</strong></p>\n<p>Terms &amp; Conditions apply:</p>\n<ul>\n<li>For new customer &amp; customers who have not visited us more than 12 months</li>\n<li>For 1st trial only</li>\n</ul>\n\n<h2>De-stress Body Massage (60 Mins) + FREE Cupping</h2>\n<p>Enjoy the powerful benefits of a body massage. Relax, de-stress and forget your worries.</p>\n<h4>Effect</h4>\n<ul>\n<li>Promotes deep relaxation and releases tension</li>\n<li>Relieves mental &amp; physical fatigue</li>\n<li>Reduces fat stored in your tissues</li>\n</ul>\n<p>Cupping originated thousands of years ago and has been extensively used in the treatment of many types of muscle tensions and common ailments.</p>\n<ul>\n<li>Enhances blood circulation</li>\n<li>Starts the healing and regeneration process through the removal of toxin and dead cells</li>\n<li>Reduces inflammation</li>\n</ul>\n<p><strong>Special 1st Trial @ $49 (UP. $80)</strong></p>\n<p>Terms &amp; Conditions apply:</p>\n<ul>\n<li>For new customer &amp; customers who have not visited us more than 12 months</li>\n<li>For 1st trial only</li>\n</ul>",
+            "excerpt": "First-trial offers on our Natural Herbal Mole &amp; Warts Removal, Silk Protein and Skin Shine face treatments, and the De-stress Body Massage with free cupping.",
+            "date": "2026-10-27 14:01:14",
+            "categories": [
+                {
+                    "slug": "promotions",
+                    "name": "Promotions"
+                }
+            ],
+            "thumbnail": 303
+        }
+    },
+    "options": {
+        "options_footer_columns": {
+            "ref": "field_footer_columns",
+            "type": "repeater",
+            "value": "3"
+        },
+        "options_footer_columns_0_heading": {
+            "ref": "field_footer_column_heading",
+            "type": "text",
+            "value": "Company"
+        },
+        "options_footer_columns_0_links": {
+            "ref": "field_footer_column_links",
+            "type": "repeater",
+            "value": "4"
+        },
+        "options_footer_columns_0_links_0_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "About"
+        },
+        "options_footer_columns_0_links_0_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": "35"
+        },
+        "options_footer_columns_0_links_0_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": ""
+        },
+        "options_footer_columns_0_links_1_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Contact"
+        },
+        "options_footer_columns_0_links_1_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": "47"
+        },
+        "options_footer_columns_0_links_1_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": ""
+        },
+        "options_footer_columns_0_links_2_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "News"
+        },
+        "options_footer_columns_0_links_2_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": "309"
+        },
+        "options_footer_columns_0_links_2_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": ""
+        },
+        "options_footer_columns_0_links_3_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Support"
+        },
+        "options_footer_columns_0_links_3_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": ""
+        },
+        "options_footer_columns_0_links_3_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": "mailto:imp@impressionbeauty.com"
+        },
+        "options_footer_columns_1_heading": {
+            "ref": "field_footer_column_heading",
+            "type": "text",
+            "value": "Follow Us"
+        },
+        "options_footer_columns_1_links": {
+            "ref": "field_footer_column_links",
+            "type": "repeater",
+            "value": "4"
+        },
+        "options_footer_columns_1_links_0_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Facebook"
+        },
+        "options_footer_columns_1_links_0_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": ""
+        },
+        "options_footer_columns_1_links_0_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": "https://www.facebook.com/impressionfacebody"
+        },
+        "options_footer_columns_1_links_1_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Instagram"
+        },
+        "options_footer_columns_1_links_1_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": ""
+        },
+        "options_footer_columns_1_links_1_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": "https://www.instagram.com/impressionfacebody/"
+        },
+        "options_footer_columns_1_links_2_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "WhatsApp"
+        },
+        "options_footer_columns_1_links_2_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": ""
+        },
+        "options_footer_columns_1_links_2_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": "https://wa.me/6580102500"
+        },
+        "options_footer_columns_1_links_3_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Beauty Insider"
+        },
+        "options_footer_columns_1_links_3_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": ""
+        },
+        "options_footer_columns_1_links_3_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": "https://beautyinsider.sg/establishment/impression-beauty/"
+        },
+        "options_footer_columns_2_heading": {
+            "ref": "field_footer_column_heading",
+            "type": "text",
+            "value": "Legal"
+        },
+        "options_footer_columns_2_links": {
+            "ref": "field_footer_column_links",
+            "type": "repeater",
+            "value": "2"
+        },
+        "options_footer_columns_2_links_0_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Privacy Policy"
+        },
+        "options_footer_columns_2_links_0_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": "3"
+        },
+        "options_footer_columns_2_links_0_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": ""
+        },
+        "options_footer_columns_2_links_1_label": {
+            "ref": "field_footer_link_label",
+            "type": "text",
+            "value": "Terms"
+        },
+        "options_footer_columns_2_links_1_page": {
+            "ref": "field_footer_link_page",
+            "type": "page_link",
+            "value": "275"
+        },
+        "options_footer_columns_2_links_1_url": {
+            "ref": "field_footer_link_url",
+            "type": "text",
+            "value": ""
+        },
+        "options_footer_enquiry_email": {
+            "ref": "field_footer_enquiry_email",
+            "type": "email",
+            "value": "imp@impressionbeauty.com"
+        },
+        "options_footer_whatsapp_number": {
+            "ref": "field_footer_whatsapp_number",
+            "type": "text",
+            "value": "6580102500"
+        }
+    },
+    "media": {
+        "231": {
+            "file": "2026/06/Face-Set-Image-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Face-Set-Image-scaled.jpg",
+            "title": "Face Care",
+            "caption": "",
+            "alt": ""
+        },
+        "79": {
+            "file": "2026/07/premium_photo-1661405696739-b938b2a58996.avif",
+            "source": "",
+            "title": "premium_photo-1661405696739-b938b2a58996",
+            "caption": "",
+            "alt": "",
+            "bundle": "premium_photo-1661405696739-b938b2a58996.avif"
+        },
+        "241": {
+            "file": "2026/10/service-d5640f47dd47.jpg",
+            "source": "https://images.unsplash.com/photo-1741896136331-10375875eff4?w=600&h=700&fit=crop&q=80",
+            "title": "service-d5640f47dd47",
+            "caption": "",
+            "alt": ""
+        },
+        "242": {
+            "file": "2026/10/service-5666894e1fcc.jpg",
+            "source": "https://images.unsplash.com/photo-1653784097013-786a8965ea3b?w=600&h=700&fit=crop&q=80",
+            "title": "service-5666894e1fcc",
+            "caption": "",
+            "alt": ""
+        },
+        "243": {
+            "file": "2026/10/service-197ffd0b50cc.jpg",
+            "source": "https://images.unsplash.com/photo-1768483018807-bd0b9ab86539?w=600&h=700&fit=crop&q=80",
+            "title": "service-197ffd0b50cc",
+            "caption": "",
+            "alt": ""
+        },
+        "277": {
+            "file": "2026/10/pexels-andrew-mcmurtrie-4342383-533x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-andrew-mcmurtrie-4342383-533x800.jpg",
+            "title": "pexels-andrew-mcmurtrie-4342383-533&#215;800-1",
+            "caption": "",
+            "alt": ""
+        },
+        "278": {
+            "file": "2026/10/Acne-Skin-514x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Acne-Skin-514x800.jpg",
+            "title": "Acne-Skin-514&#215;800-1",
+            "caption": "",
+            "alt": ""
+        },
+        "279": {
+            "file": "2026/10/Open-Pores-533x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Open-Pores-533x800.jpg",
+            "title": "Open-Pores-533&#215;800-1",
+            "caption": "",
+            "alt": ""
+        },
+        "232": {
+            "file": "2026/06/Body-Set-Image-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Body-Set-Image-scaled.jpg",
+            "title": "Body Care",
+            "caption": "",
+            "alt": ""
+        },
+        "280": {
+            "file": "2026/10/body-wrap-3.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/body-wrap-3.jpg",
+            "title": "body-wrap-3",
+            "caption": "",
+            "alt": ""
+        },
+        "281": {
+            "file": "2026/10/pexels-arina-krasnikova-6663367-599x400-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-arina-krasnikova-6663367-599x400.jpg",
+            "title": "pexels-arina-krasnikova-6663367-599&#215;400-1",
+            "caption": "",
+            "alt": ""
+        },
+        "282": {
+            "file": "2026/10/pexels-elina-fairytale-3865565-533x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-elina-fairytale-3865565-533x800.jpg",
+            "title": "pexels-elina-fairytale-3865565-533&#215;800-1",
+            "caption": "",
+            "alt": ""
+        },
+        "283": {
+            "file": "2026/10/pexels-sarah-chai-7263026-533x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-sarah-chai-7263026-533x800.jpg",
+            "title": "pexels-sarah-chai-7263026-533&#215;800-1",
+            "caption": "",
+            "alt": ""
+        },
+        "284": {
+            "file": "2026/10/pexels-elina-fairytale-3865529-1-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-elina-fairytale-3865529-1-scaled.jpg",
+            "title": "pexels-elina-fairytale-3865529-1-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "78": {
+            "file": "2026/07/premium_photo-1661379309042-eac5bb317139.avif",
+            "source": "",
+            "title": "premium_photo-1661379309042-eac5bb317139",
+            "caption": "",
+            "alt": "",
+            "bundle": "premium_photo-1661379309042-eac5bb317139.avif"
+        },
+        "285": {
+            "file": "2026/10/dry-eye-before.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/dry-eye-before.jpg",
+            "title": "dry-eye-before",
+            "caption": "Before Treatment",
+            "alt": ""
+        },
+        "286": {
+            "file": "2026/10/dry-eye-after.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/dry-eye-after.jpg",
+            "title": "dry-eye-after",
+            "caption": "After Treatment",
+            "alt": ""
+        },
+        "287": {
+            "file": "2026/10/Zoom-In-Eyes-Image-H-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Zoom-In-Eyes-Image-H-scaled.jpg",
+            "title": "Zoom-In-Eyes-Image-H-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "288": {
+            "file": "2026/10/pexels-arina-krasnikova-6663571-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-arina-krasnikova-6663571-scaled.jpg",
+            "title": "pexels-arina-krasnikova-6663571-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "259": {
+            "file": "2026/10/Eyes-Set-Image-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Eyes-Set-Image-scaled.jpg",
+            "title": "Eyes-Set-Image-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "80": {
+            "file": "2026/07/premium_photo-1663011293702-32d7522393ca.avif",
+            "source": "",
+            "title": "premium_photo-1663011293702-32d7522393ca",
+            "caption": "",
+            "alt": "",
+            "bundle": "premium_photo-1663011293702-32d7522393ca.avif"
+        },
+        "307": {
+            "file": "2026/10/smooth-legs-cream.jpg",
+            "source": "https://images.pexels.com/photos/4735915/pexels-photo-4735915.jpeg?auto=compress&cs=tinysrgb&w=1400",
+            "title": "smooth-legs-cream",
+            "caption": "",
+            "alt": "Applying cream to smooth legs"
+        },
+        "306": {
+            "file": "2026/06/spa-facial-clinic.jpg",
+            "source": "https://images.pexels.com/photos/15866050/pexels-photo-15866050.jpeg?auto=compress&cs=tinysrgb&w=1400",
+            "title": "spa-facial-clinic",
+            "caption": "",
+            "alt": "Client relaxing during a cream facial treatment"
+        },
+        "289": {
+            "file": "2026/10/Amazing-Touch-Image-1-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Amazing-Touch-Image-1-scaled.jpg",
+            "title": "Amazing-Touch-Image-1-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "290": {
+            "file": "2026/10/320742_1100-800x825-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/320742_1100-800x825-1.jpg",
+            "title": "320742_1100-800&#215;825-1",
+            "caption": "",
+            "alt": ""
+        },
+        "291": {
+            "file": "2026/10/spider-nevus2.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/spider-nevus2.jpg",
+            "title": "spider-nevus2",
+            "caption": "",
+            "alt": ""
+        },
+        "292": {
+            "file": "2026/10/Xanthelasma.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/Xanthelasma.jpg",
+            "title": "Xanthelasma",
+            "caption": "",
+            "alt": ""
+        },
+        "293": {
+            "file": "2026/10/313623_1100-800x825-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/313623_1100-800x825-1.jpg",
+            "title": "313623_1100-800&#215;825-1",
+            "caption": "",
+            "alt": ""
+        },
+        "294": {
+            "file": "2026/10/skin-tags-grook-da-oger-own-work-2012-wikicommons.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/skin-tags-grook-da-oger-own-work-2012-wikicommons.jpg",
+            "title": "skin-tags-grook-da-oger-own-work-2012-wikicommons",
+            "caption": "",
+            "alt": ""
+        },
+        "295": {
+            "file": "2026/10/2296-sebaceous_hyperplasia-1296x728-slide1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/2296-sebaceous_hyperplasia-1296x728-slide1.jpg",
+            "title": "2296-sebaceous_hyperplasia-1296&#215;728-slide1",
+            "caption": "",
+            "alt": ""
+        },
+        "296": {
+            "file": "2026/10/mole-before.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/mole-before.jpg",
+            "title": "mole-before",
+            "caption": "Before Treatment",
+            "alt": ""
+        },
+        "297": {
+            "file": "2026/10/mole-after.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/mole-after.jpg",
+            "title": "mole-after",
+            "caption": "After Treatment",
+            "alt": ""
+        },
+        "298": {
+            "file": "2026/10/comparison-chart.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2021/10/comparison-chart.jpg",
+            "title": "comparison-chart",
+            "caption": "",
+            "alt": ""
+        },
+        "233": {
+            "file": "2026/06/hair-removal.jpg",
+            "source": "",
+            "title": "hair-removal.jpg",
+            "caption": "",
+            "alt": "",
+            "bundle": "hair-removal.jpg"
+        },
+        "234": {
+            "file": "2026/06/skin-growth-removal.jpg",
+            "source": "",
+            "title": "skin-growth-removal.jpg",
+            "caption": "",
+            "alt": "",
+            "bundle": "skin-growth-removal.jpg"
+        },
+        "301": {
+            "file": "2026/10/Putting-Mask-Image-H-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/Putting-Mask-Image-H-scaled.jpg",
+            "title": "Putting-Mask-Image-H-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "302": {
+            "file": "2026/10/pexels-arina-krasnikova-6663367-scaled-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-arina-krasnikova-6663367-scaled.jpg",
+            "title": "pexels-arina-krasnikova-6663367-scaled-1",
+            "caption": "",
+            "alt": ""
+        },
+        "303": {
+            "file": "2026/10/pexels-koolshooters-6628696-1200x800-1.jpg",
+            "source": "https://impressionbeauty.com/wp-content/uploads/2022/04/pexels-koolshooters-6628696-1200x800.jpg",
+            "title": "pexels-koolshooters-6628696-1200&#215;800-1",
+            "caption": "",
+            "alt": ""
+        }
+    },
+    "links": {
+        "30": "face-care",
+        "28": "body-care",
+        "272": "eye-care",
+        "273": "hair-removal",
+        "26": "mole-warts-removal",
+        "37": "general",
+        "3": "privacy-policy",
+        "275": "terms-and-conditions",
+        "274": "promotions",
+        "309": "news",
+        "35": "about-us",
+        "47": "contact-us"
+    }
+}

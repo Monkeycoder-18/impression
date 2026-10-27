@@ -1,0 +1,117 @@
+<?php
+
+add_action( 'acf/init', function () {
+    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+        return;
+    }
+
+    acf_add_local_field_group( [
+        'key'    => 'group_promotion',
+        'title'  => 'Promotion Page',
+        'fields' => [
+            [
+                'key'          => 'field_promo_header_tab',
+                'label'        => 'Header',
+                'name'         => '',
+                'type'         => 'tab',
+                'instructions' => 'The banner at the top of the page.',
+            ],
+            [
+                'key'   => 'field_promo_badge',
+                'label' => 'Badge',
+                'name'  => 'promo_badge',
+                'type'  => 'text',
+            ],
+            [
+                'key'          => 'field_promo_heading',
+                'label'        => 'Heading',
+                'name'         => 'promo_heading',
+                'type'         => 'text',
+                'instructions' => 'Leave empty to use the page title.',
+            ],
+            [
+                'key'   => 'field_promo_intro',
+                'label' => 'Intro text',
+                'name'  => 'promo_intro',
+                'type'  => 'textarea',
+                'rows'  => 2,
+            ],
+            [
+                'key'          => 'field_promo_list_tab',
+                'label'        => 'Promotions',
+                'name'         => '',
+                'type'         => 'tab',
+                'instructions' => 'One row per promotion. Drag rows to change the order.',
+            ],
+            [
+                'key'          => 'field_promotions',
+                'label'        => 'Promotions',
+                'name'         => 'promotions',
+                'type'         => 'repeater',
+                'layout'       => 'block',
+                'button_label' => 'Add a promotion',
+                'sub_fields'   => [
+                    [
+                        'key'           => 'field_promotion_image',
+                        'label'         => 'Photo',
+                        'name'          => 'image',
+                        'type'          => 'image',
+                        'return_format' => 'array',
+                        'preview_size'  => 'medium',
+                    ],
+                    [
+                        'key'   => 'field_promotion_title',
+                        'label' => 'Title',
+                        'name'  => 'title',
+                        'type'  => 'text',
+                    ],
+                    [
+                        'key'   => 'field_promotion_subtitle',
+                        'label' => 'Subtitle',
+                        'name'  => 'subtitle',
+                        'type'  => 'text',
+                    ],
+                    [
+                        'key'          => 'field_promotion_description',
+                        'label'        => 'Description',
+                        'name'         => 'description',
+                        'type'         => 'wysiwyg',
+                        'tabs'         => 'visual',
+                        'toolbar'      => 'basic',
+                        'media_upload' => 0,
+                    ],
+                    [
+                        'key'          => 'field_promotion_price',
+                        'label'        => 'Offer',
+                        'name'         => 'price',
+                        'type'         => 'text',
+                        'instructions' => 'e.g. "Special 1st Trial @ $69 (U.P. $206)"',
+                    ],
+                    [
+                        'key'          => 'field_promotion_terms',
+                        'label'        => 'Terms',
+                        'name'         => 'terms',
+                        'type'         => 'wysiwyg',
+                        'tabs'         => 'visual',
+                        'toolbar'      => 'basic',
+                        'media_upload' => 0,
+                    ],
+                ],
+            ],
+        ],
+        'location' => [
+            [
+                [
+                    'param'    => 'page_template',
+                    'operator' => '==',
+                    'value'    => 'template-promotion-page.php',
+                ],
+            ],
+        ],
+        'position'              => 'normal',
+        'style'                 => 'default',
+        'label_placement'       => 'top',
+        'instruction_placement' => 'label',
+        'active'                => true,
+    ] );
+} );

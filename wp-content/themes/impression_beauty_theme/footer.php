@@ -28,35 +28,52 @@
                 ?>
             </div> -->
 
-            <div class="col-lg-2">
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="<?php echo esc_url(home_url('/about')); ?>">About</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
+            <?php
+            // Columns are edited under Footer in the admin. Until they are saved, use these defaults.
+            $footer_columns = get_field('footer_columns', 'option');
+            if (!$footer_columns) {
+                $page_url = function ($slug) {
+                    $page = get_page_by_path($slug);
+                    return $page ? get_permalink($page) : '';
+                };
+                $footer_columns = [
+                    ['heading' => 'Company', 'links' => [
+                        ['label' => 'About',   'page' => $page_url('about-us'),   'url' => ''],
+                        ['label' => 'Contact', 'page' => $page_url('contact-us'), 'url' => ''],
+                        ['label' => 'News',    'page' => $page_url('news'),       'url' => ''],
+                        ['label' => 'Support', 'page' => '', 'url' => 'mailto:' . impression_enquiry_email()],
+                    ]],
+                    ['heading' => 'Follow Us', 'links' => [
+                        ['label' => 'Facebook',       'page' => '', 'url' => 'https://www.facebook.com/impressionfacebody'],
+                        ['label' => 'Instagram',      'page' => '', 'url' => 'https://www.instagram.com/impressionfacebody/'],
+                        ['label' => 'WhatsApp',       'page' => '', 'url' => 'https://wa.me/' . impression_whatsapp_number()],
+                        ['label' => 'Beauty Insider', 'page' => '', 'url' => 'https://beautyinsider.sg/establishment/impression-beauty/'],
+                    ]],
+                    ['heading' => 'Legal', 'links' => [
+                        ['label' => 'Privacy Policy', 'page' => $page_url('privacy-policy'),       'url' => ''],
+                        ['label' => 'Terms',          'page' => $page_url('terms-and-conditions'), 'url' => ''],
+                    ]],
+                ];
+            }
+            ?>
 
-            <div class="col-lg-2">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">Privacy Policy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Returns</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2">
-                <h5>Follow Us</h5>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                </ul>
-            </div>
+            <?php foreach ($footer_columns as $column) : ?>
+                <div class="col-lg-2">
+                    <h5><?php echo esc_html($column['heading'] ?? ''); ?></h5>
+                    <ul>
+                        <?php foreach ((array) ($column['links'] ?? []) as $link) :
+                            $href = !empty($link['page']) ? $link['page'] : ($link['url'] ?? '');
+                            if (!$href) {
+                                continue;
+                            }
+                            // Other websites open in a new tab.
+                            $external = strpos($href, 'http') === 0 && strpos($href, home_url()) !== 0;
+                            ?>
+                            <li><a href="<?php echo esc_url($href); ?>"<?php echo $external ? ' target="_blank" rel="noopener"' : ''; ?>><?php echo esc_html($link['label'] ?? ''); ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
 
         </div>
 
@@ -68,7 +85,7 @@
 </footer>
 
 <!-- Floating WhatsApp button: wa.me opens the app on phones, WhatsApp Web on desktop -->
-<a href="https://wa.me/6580102500"
+<a href="https://wa.me/<?php echo esc_attr(impression_whatsapp_number()); ?>"
    class="whatsapp-float"
    target="_blank"
    rel="noopener"

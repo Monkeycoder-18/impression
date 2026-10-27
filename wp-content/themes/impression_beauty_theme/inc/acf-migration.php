@@ -1,13 +1,16 @@
 <?php
 /**
- * TEMPORARY — remove after the live migration is done.
+ * TEMPORARY — remove after the live migration is done (with the migration/ folder).
  *
- * Tools → ACF migration: moves the Home / About content from the old
- * database field groups to the theme-code groups (inc/acf-home.php,
- * inc/acf-about.php, inc/acf-service.php).
+ * Tools → ACF migration:
+ *  - deletes the old database field groups (the theme code defines them now),
+ *  - copies the content prepared on local (migration/content.json): service,
+ *    FAQ, Privacy, Terms, Promotions and News pages, the news post, footer
+ *    settings and their images. Those pages are replaced; missing ones are created.
+ *  - fills Home / About fields that are still empty (filled ones are kept),
+ *  - menu: Eye Care + Hair Removal under Services, News → the News page.
  *
- * "Check" only reports. "Apply" deletes the old field groups and fills
- * fields that are still empty. Filled fields are never overwritten.
+ * "Check" only reports. "Apply" makes the changes.
  */
 
 add_action( 'admin_menu', function () {
@@ -27,13 +30,13 @@ function impression_acf_migration_page() {
     ?>
     <div class="wrap">
         <h1>ACF migration</h1>
-        <p>Moves the Home and About fields to the theme code and fills empty fields. Filled fields are never overwritten. Back up the database before applying.</p>
+        <p>Copies the content prepared on local to this site, deletes the old field groups and fills empty Home / About fields. The listed pages are <strong>replaced</strong>. Back up the database before applying.</p>
         <pre style="background:#fff;border:1px solid #ccd0d4;padding:12px;max-height:600px;overflow:auto;"><?php echo esc_html( $log ); ?></pre>
         <?php if ( ! $apply ) : ?>
             <form method="post">
                 <?php wp_nonce_field( 'impression_acf_migration' ); ?>
                 <button type="submit" name="impression_acf_apply" value="1" class="button button-primary"
-                        onclick="return confirm('Delete the old field groups and fill the empty fields?');">Apply</button>
+                        onclick="return confirm('Replace the listed pages, delete the old field groups and fill the empty fields?');">Apply</button>
             </form>
         <?php endif; ?>
     </div>
@@ -49,7 +52,7 @@ function impression_acf_migration_run( $apply ) {
     }
 
     // ── 1. The theme field groups must be registered ────────────────────
-    foreach ( [ 'group_home', 'group_about', 'group_service' ] as $key ) {
+    foreach ( [ 'group_home', 'group_about', 'group_service', 'group_faq', 'group_promotion', 'group_footer' ] as $key ) {
         $g = acf_get_field_group( $key );
         if ( ! $g || ! empty( $g['ID'] ) ) {
             echo "  !!  theme group $key NOT FOUND\n\nStopping: the theme is not fully deployed.\n";
@@ -58,12 +61,17 @@ function impression_acf_migration_run( $apply ) {
         echo "  ok  theme group $key registered\n";
     }
 
-    $home_id     = (int) get_option( 'page_on_front' );
-    $about_id    = (int) ( get_posts( [ 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'template-about-page.php', 'numberposts' => 1, 'fields' => 'ids' ] )[0] ?? 0 );
-    $service_ids = get_posts( [ 'post_type' => 'page', 'post_status' => 'publish', 'meta_key' => '_wp_page_template', 'meta_value' => 'template-service-page.php', 'numberposts' => -1, 'fields' => 'ids' ] );
-    $title       = fn( $id ) => html_entity_decode( get_the_title( $id ) );
+    $data = json_decode( (string) @file_get_contents( get_template_directory() . '/migration/content.json' ), true );
+    if ( ! $data ) {
+        echo "  !!  migration/content.json missing or unreadable\n\nStopping.\n";
+        return;
+    }
 
-    echo "\n  front page: $home_id (" . $title( $home_id ) . ")\n  about page: $about_id (" . $title( $about_id ) . ")\n  service pages: " . implode( ', ', array_map( fn( $id ) => "$id (" . $title( $id ) . ')', $service_ids ) ) . "\n";
+    $home_id  = (int) get_option( 'page_on_front' );
+    $about_id = (int) ( get_posts( [ 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => 'template-about-page.php', 'numberposts' => 1, 'fields' => 'ids' ] )[0] ?? 0 );
+    $title    = fn( $id ) => html_entity_decode( get_the_title( $id ) );
+
+    echo "\n  front page: $home_id (" . $title( $home_id ) . ")\n  about page: $about_id (" . $title( $about_id ) . ")\n";
     if ( ! $home_id || ! $about_id ) {
         echo "\nStopping: front page or About page not found.\n";
         return;
@@ -106,13 +114,23 @@ function impression_acf_migration_run( $apply ) {
         echo "  none\n";
     }
 
-    // ── 4. Content to fill (only where the field is still empty) ────────
-    $plan = [ $home_id => impression_acf_migration_home(), $about_id => impression_acf_migration_about() ];
-    foreach ( $service_ids as $sid ) {
-        $plan[ $sid ] = impression_acf_migration_service();
+    // ── 4. Content copied from local ────────────────────────────────────
+    echo "\nContent copied from local (these pages are replaced, missing ones created):\n";
+    foreach ( $data['pages'] as $slug => $p ) {
+        $live = get_page_by_path( $slug );
+        echo '  ' . ( $live ? "replace page {$live->ID}" : 'create page' ) . " $slug ({$p['title']})\n";
     }
+    foreach ( $data['posts'] as $slug => $p ) {
+        $live = get_page_by_path( $slug, OBJECT, 'post' );
+        echo '  ' . ( $live ? "replace post {$live->ID}" : 'create post' ) . " $slug ({$p['title']})\n";
+    }
+    $have = count( array_filter( $data['media'], 'impression_acf_migration_find_media' ) );
+    echo '  images: ' . count( $data['media'] ) . " ($have already in the media library, the rest are imported)\n";
+    echo '  footer settings: ' . count( $data['options'] ) . " values\n";
 
-    echo "\nFields to fill (empty fields only):\n";
+    // ── 5. Home / About fields to fill (only where still empty) ─────────
+    $plan = [ $home_id => impression_acf_migration_home(), $about_id => impression_acf_migration_about() ];
+    echo "\nHome / About fields to fill (empty fields only):\n";
     $todo = [];
     foreach ( $plan as $pid => $fields ) {
         $fill = $skip = 0;
@@ -129,7 +147,7 @@ function impression_acf_migration_run( $apply ) {
         echo "  page $pid (" . $title( $pid ) . "): $fill to fill, $skip already have content\n";
     }
 
-    // ── 5. Apply ────────────────────────────────────────────────────────
+    // ── 6. Apply ────────────────────────────────────────────────────────
     if ( ! $apply ) {
         echo "\nNothing changed. Press Apply to make these changes.\n";
         return;
@@ -139,7 +157,7 @@ function impression_acf_migration_run( $apply ) {
         return;
     }
 
-    @set_time_limit( 300 ); // image downloads
+    @set_time_limit( 600 ); // image downloads
     require_once ABSPATH . 'wp-admin/includes/file.php';
     require_once ABSPATH . 'wp-admin/includes/media.php';
     require_once ABSPATH . 'wp-admin/includes/image.php';
@@ -149,11 +167,27 @@ function impression_acf_migration_run( $apply ) {
         echo "  $gid " . ( acf_delete_field_group( $gid ) ? 'deleted' : 'FAILED' ) . "\n";
     }
 
-    echo "\nFilling fields...\n";
+    echo "\nCopying content...\n";
+    $ids = impression_acf_migration_content( $data );
+
+    echo "\nFilling Home / About fields...\n";
     foreach ( $todo as [ $pid, $key, $value ] ) {
         update_field( $key, is_callable( $value ) ? $value() : $value, $pid );
     }
-    echo "  " . count( $todo ) . " fields written.\n\nDone. Remove inc/acf-migration.php in the next deploy.\n";
+    echo '  ' . count( $todo ) . " fields written.\n";
+
+    // Home "Discover More Discount and Promotion" button -> the Promotions page.
+    $trend = get_field( 'trend_content', $home_id, false );
+    $fixed = preg_replace( '#<a( href="[^"]*")? class="btn btn-beauty">Discover More#', '<a href="' . esc_url( get_permalink( $ids['promotions'] ) ) . '" class="btn btn-beauty">Discover More', (string) $trend, 1 );
+    if ( $fixed !== $trend ) {
+        update_field( 'field_6a8e799a00018', $fixed, $home_id );
+        echo "  home promo button now links to the Promotions page\n";
+    }
+
+    echo "\nMenu...\n";
+    impression_acf_migration_menu( $ids );
+
+    echo "\nDone. Check the site, then remove inc/acf-migration.php and the migration/ folder in the next deploy.\n";
 }
 
 // Imports an image into the media library once (re-runs reuse it).
@@ -257,62 +291,247 @@ function impression_acf_migration_about() {
     ];
 }
 
-function impression_acf_migration_service() {
-    $u   = 'https://images.unsplash.com/';
-    $img = 'impression_acf_migration_image';
+// ── Content copied from local (migration/content.json) ─────────────────
 
-    return [
-        'field_service_hero_badge'       => 'Impression Beauty',
-        'field_service_hero_subtitle'    => 'Professional treatments tailored to your skin and wellness needs. Trusted by thousands of satisfied customers since 1994.',
-        'field_service_hero_image'       => fn() => $img( $u . 'photo-1758600587391-338f5376b7ed?w=700&h=800&fit=crop&q=80' ),
-        'field_service_hero_float_badge' => 'Since 1994',
-        'field_service_hero_btn1_text'   => 'View Treatments',
-        'field_service_hero_btn1_link'   => '#treatments',
-        'field_service_hero_btn2_text'   => 'Free Consultation',
-        'field_service_hero_btn2_link'   => '#consultation',
-        'field_service_stats' => [
-            [ 'number' => '30+',    'label' => 'Years Experience' ],
-            [ 'number' => '6,000+', 'label' => 'Successful Cases' ],
-            [ 'number' => '100%',   'label' => 'Herbal & Natural' ],
-            [ 'number' => '5★',     'label' => 'Customer Rated' ],
-        ],
-        'field_service_intro_image'       => fn() => $img( $u . 'photo-1763539818420-165e69b7489b?w=800&h=700&fit=crop&q=80' ),
-        'field_service_intro_badge'       => 'About This Service',
-        'field_service_intro_heading'     => 'Why Choose Impression Beauty?',
-        'field_service_intro_paragraph_1' => 'Our expert consultants provide personalised beauty and wellness treatments that combine cutting-edge technology with time-tested natural methods. Every treatment is tailored to your unique skin type and individual goals.',
-        'field_service_intro_paragraph_2' => 'Whether you are looking to resolve a stubborn skin concern or simply maintain a radiant complexion, our experienced team is here to guide you at every step of your beauty journey.',
-        'field_service_intro_checks'      => [ [ 'text' => 'Professional Consultants' ], [ 'text' => 'Proven Results' ], [ 'text' => 'Personalised Care' ] ],
-        'field_service_audience_heading'    => 'Who Is This For?',
-        'field_service_audience_subheading' => 'Treatments designed for every concern and skin type.',
-        'field_service_audience_cards'      => fn() => [
-            [ 'image' => $img( $u . 'photo-1741896136331-10375875eff4?w=600&h=700&fit=crop&q=80' ), 'title' => 'Dry & Sensitive Skin',    'description' => 'Restore hydration and soothe irritated skin.' ],
-            [ 'image' => $img( $u . 'photo-1653784097013-786a8965ea3b?w=600&h=700&fit=crop&q=80' ), 'title' => 'Oily & Combination Skin', 'description' => 'Control excess sebum and refine large pores.' ],
-            [ 'image' => $img( $u . 'photo-1768483018807-bd0b9ab86539?w=600&h=700&fit=crop&q=80' ), 'title' => 'Pigmentation & Ageing',   'description' => 'Even skin tone and reduce visible signs of ageing.' ],
-        ],
-        'field_service_treatments_heading'    => 'Recommended Treatments',
-        'field_service_treatments_subheading' => 'Carefully curated procedures for visible, lasting results.',
-        'field_service_treatments' => [
-            [ 'duration' => '90 mins', 'name' => 'Multi Fruits Energizing Treatment', 'description' => 'High minerals & vitamins content products to strengthen skin cellular and protect skin against free radical and UV lights, fighting skin ageing for a brighter, fairer look.' ],
-            [ 'duration' => '90 mins', 'name' => 'Skin RejuV Treatment',              'description' => 'Dry flaky and red skin treatment using complete Hydra Silk skin care with high silk protein that immediately replaces lost moisture. Reduces redness and anti-sensitivity.' ],
-            [ 'duration' => '60 mins', 'name' => 'RF Treatment',                       'description' => 'For mature sagging skin. Using Bio Heat to promote cell regeneration, improve blood and lymph circulation, and provide an instant lift.' ],
-            [ 'duration' => '90 mins', 'name' => 'Skin Fruition / Renewal Treatment',  'description' => 'For oily blemishes non-sensitive skin. With AHA range products to soften, smoothen, lighten uneven skin and reduce blemishes.' ],
-            [ 'duration' => '90 mins', 'name' => 'Acne Treatment',                     'description' => 'Deep cleansing with anti-septic and healing effect. Controls sebum secretion and prevents bacterial infection for oily blemish-prone skin.' ],
-            [ 'duration' => '80 mins', 'name' => 'Diamond Peel Treatment',             'description' => 'Effectively removes dead skin cells, refines large pores, smoothens scars and evens skin tone for large pore, rough & slight blemish skin.' ],
-        ],
-        'field_service_process_heading'    => 'How It Works',
-        'field_service_process_subheading' => 'A simple, comfortable process from consultation to results.',
-        'field_service_process_steps' => [
-            [ 'number' => '01', 'title' => 'Free Consultation',     'description' => 'Our expert consultant analyses your skin and discusses your concerns to recommend the most suitable treatment plan.' ],
-            [ 'number' => '02', 'title' => 'Treatment Application', 'description' => 'Your chosen treatment is professionally administered in a clean, comfortable environment. Most sessions take 45–90 mins.' ],
-            [ 'number' => '03', 'title' => 'Review & Follow Up',    'description' => 'We schedule a follow-up to review your results and adjust your treatment plan for continued improvement.' ],
-        ],
-        'field_service_cta_badge'         => 'Get Started Today',
-        'field_service_cta_heading'       => 'Book Your Free Consultation',
-        'field_service_cta_text'          => 'Our friendly staff will be happy to answer your questions. Fill in the form or contact us directly — we will get back to you shortly.',
-        'field_service_cta_phone_text'    => '📞 +65 6333 9093',
-        'field_service_cta_phone_link'    => 'tel:+6563339093',
-        'field_service_cta_whatsapp_text' => 'WhatsApp Us',
-        'field_service_cta_whatsapp_link' => 'https://wa.me/6598678787',
-        'field_service_cta_hours'         => 'Operating Hours: Mon–Fri 11:30am–9:00pm • Sat & Sun 10:00am–6:00pm',
-    ];
+// Media library ID for an exported image, or 0 when it has not been imported yet.
+function impression_acf_migration_find_media( $m ) {
+    $key = $m['source'] ? $m['source'] : 'bundle:' . $m['bundle'];
+    $ids = get_posts( [ 'post_type' => 'attachment', 'post_status' => 'any', 'meta_key' => '_seed_source_url', 'meta_value' => $key, 'numberposts' => 1, 'fields' => 'ids' ] );
+    return $ids ? (int) $ids[0] : 0;
+}
+
+// Imports an exported image once (re-runs reuse it) and returns its ID.
+function impression_acf_migration_media( $m ) {
+    $id = impression_acf_migration_find_media( $m );
+    if ( $id ) {
+        return $id;
+    }
+    if ( $m['source'] ) {
+        $tmp = download_url( $m['source'] );
+    } else {
+        $tmp = wp_tempnam( $m['bundle'] );
+        if ( ! copy( get_template_directory() . '/migration/media/' . $m['bundle'], $tmp ) ) {
+            $tmp = new WP_Error( 'copy', 'could not copy the bundled file' );
+        }
+    }
+    $label = $m['source'] ? $m['source'] : $m['bundle'];
+    if ( is_wp_error( $tmp ) ) {
+        echo "  ! image failed: $label — " . $tmp->get_error_message() . "\n";
+        return 0;
+    }
+    $id = media_handle_sideload( [ 'name' => basename( $m['file'] ), 'tmp_name' => $tmp ], 0, $m['title'] );
+    if ( is_wp_error( $id ) ) {
+        @unlink( $tmp );
+        echo "  ! image failed: $label — " . $id->get_error_message() . "\n";
+        return 0;
+    }
+    update_post_meta( $id, '_seed_source_url', $m['source'] ? $m['source'] : 'bundle:' . $m['bundle'] );
+    if ( $m['caption'] ) {
+        wp_update_post( [ 'ID' => $id, 'post_excerpt' => wp_slash( $m['caption'] ) ] );
+    }
+    if ( $m['alt'] ) {
+        update_post_meta( $id, '_wp_attachment_image_alt', wp_slash( $m['alt'] ) );
+    }
+    return (int) $id;
+}
+
+// Removes a post's ACF values, so the copied content replaces it exactly.
+function impression_acf_migration_clear_acf( $post_id ) {
+    foreach ( get_post_meta( $post_id ) as $key => $values ) {
+        if ( $key[0] === '_' && strpos( (string) $values[0], 'field_' ) === 0 ) {
+            delete_post_meta( $post_id, $key );
+            delete_post_meta( $post_id, substr( $key, 1 ) );
+        }
+    }
+}
+
+// Copies pages, posts, footer settings and images. Returns slug => live ID.
+function impression_acf_migration_content( $data ) {
+    global $wpdb;
+
+    $media = [];
+    foreach ( $data['media'] as $local_id => $m ) {
+        $media[ $local_id ] = impression_acf_migration_media( $m );
+    }
+    echo '  images: ' . count( array_filter( $media ) ) . ' of ' . count( $media ) . " ready\n";
+
+    // Create missing pages / posts first, so links between them can be mapped.
+    $ids = [];
+    foreach ( $data['pages'] as $slug => $p ) {
+        $live = get_page_by_path( $slug );
+        $ids[ $slug ] = $live ? $live->ID : wp_insert_post( [ 'post_type' => 'page', 'post_status' => 'draft', 'post_name' => $slug, 'post_title' => wp_slash( $p['title'] ) ] );
+    }
+    $post_ids = [];
+    foreach ( $data['posts'] as $slug => $p ) {
+        $live = get_page_by_path( $slug, OBJECT, 'post' );
+        $post_ids[ $slug ] = $live ? $live->ID : wp_insert_post( [ 'post_type' => 'post', 'post_status' => 'draft', 'post_name' => $slug, 'post_title' => wp_slash( $p['title'] ) ] );
+    }
+
+    // Local page ID => live page ID.
+    $links = [];
+    foreach ( $data['links'] as $local_id => $slug ) {
+        $live = $ids[ $slug ] ?? ( ( $p = get_page_by_path( $slug ) ) ? $p->ID : 0 );
+        if ( $live ) {
+            $links[ $local_id ] = $live;
+        }
+    }
+
+    // Swaps local URLs in text for this site's.
+    $fix = function ( $value ) use ( &$fix, $links ) {
+        if ( is_array( $value ) ) {
+            return array_map( $fix, $value );
+        }
+        if ( ! is_string( $value ) || strpos( $value, 'impressionbeauty.test' ) === false ) {
+            return $value;
+        }
+        $value = preg_replace_callback( '#https?://impressionbeauty\.test/\?page_id=(\d+)#', fn( $m ) => isset( $links[ $m[1] ] ) ? get_permalink( $links[ $m[1] ] ) : home_url( '/' ), $value );
+        return str_replace( 'https://impressionbeauty.test', untrailingslashit( home_url() ), $value );
+    };
+
+    // An exported ACF value, with local image / page IDs swapped for this site's.
+    $value_for = function ( $v ) use ( $media, $links, $fix ) {
+        switch ( $v['type'] ) {
+            case 'image':
+            case 'file':
+                return $v['value'] ? ( $media[ $v['value'] ] ?? '' ) : '';
+            case 'gallery':
+                return array_values( array_filter( array_map( fn( $id ) => $media[ $id ] ?? 0, (array) $v['value'] ) ) );
+            case 'page_link':
+            case 'post_object':
+                return is_numeric( $v['value'] ) ? ( $links[ $v['value'] ] ?? '' ) : $fix( $v['value'] );
+        }
+        return $fix( $v['value'] );
+    };
+
+    $write_acf = function ( $post_id, $acf ) use ( $value_for ) {
+        impression_acf_migration_clear_acf( $post_id );
+        foreach ( (array) $acf as $key => $v ) {
+            update_post_meta( $post_id, $key, wp_slash( $value_for( $v ) ) );
+            update_post_meta( $post_id, '_' . $key, $v['ref'] );
+        }
+    };
+
+    foreach ( $data['pages'] as $slug => $p ) {
+        $id = $ids[ $slug ];
+        wp_update_post( wp_slash( [ 'ID' => $id, 'post_title' => $p['title'], 'post_status' => $p['status'], 'post_content' => $fix( $p['content'] ), 'post_excerpt' => $p['excerpt'] ] ) );
+        update_post_meta( $id, '_wp_page_template', $p['template'] ? $p['template'] : 'default' );
+        $write_acf( $id, $p['acf'] );
+        echo "  page $slug: $id\n";
+    }
+
+    foreach ( $data['posts'] as $slug => $p ) {
+        $id   = $post_ids[ $slug ];
+        $cats = [];
+        foreach ( $p['categories'] as $c ) {
+            $term   = term_exists( $c['slug'], 'category' );
+            $cats[] = $term ? (int) $term['term_id'] : (int) wp_insert_term( $c['name'], 'category', [ 'slug' => $c['slug'] ] )['term_id'];
+        }
+        wp_update_post( wp_slash( [ 'ID' => $id, 'post_title' => $p['title'], 'post_status' => 'publish', 'post_content' => $fix( $p['content'] ), 'post_excerpt' => $p['excerpt'], 'post_date' => $p['date'], 'post_date_gmt' => get_gmt_from_date( $p['date'] ), 'post_category' => $cats ] ) );
+        if ( ! empty( $media[ $p['thumbnail'] ] ) ) {
+            set_post_thumbnail( $id, $media[ $p['thumbnail'] ] );
+        }
+        echo "  post $slug: $id\n";
+    }
+
+    // Footer settings (ACF options).
+    $wpdb->query( "DELETE FROM $wpdb->options WHERE option_name LIKE 'options\_footer%' OR option_name LIKE '\_options\_footer%'" );
+    wp_cache_delete( 'alloptions', 'options' );
+    foreach ( $data['options'] as $key => $v ) {
+        update_option( $key, $value_for( $v ) );
+        update_option( '_' . $key, $v['ref'] );
+    }
+    echo '  footer settings: ' . count( $data['options'] ) . " values\n";
+
+    update_option( 'wp_page_for_privacy_policy', $ids['privacy-policy'] );
+    echo "  privacy policy page: {$ids['privacy-policy']}\n";
+
+    // The separate FAQ pages are merged into the main FAQ page.
+    foreach ( [ 'faq-face-care', 'faq-body-care' ] as $slug ) {
+        $p = get_page_by_path( $slug );
+        if ( $p && $p->post_status === 'publish' ) {
+            wp_update_post( [ 'ID' => $p->ID, 'post_status' => 'draft' ] );
+            echo "  $slug set to draft\n";
+        }
+    }
+
+    // imp@impressionbeauty.com.sg does not exist; the mailbox is imp@impressionbeauty.com.
+    $bad  = 'imp@impressionbeauty.com.sg';
+    $like = '%' . $wpdb->esc_like( $bad ) . '%';
+    $n    = 0;
+    foreach ( $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_type <> 'revision' AND post_content LIKE %s", $like ) ) as $pid ) {
+        wp_update_post( wp_slash( [ 'ID' => $pid, 'post_content' => str_replace( $bad, 'imp@impressionbeauty.com', get_post_field( 'post_content', $pid, 'raw' ) ) ] ) );
+        $n++;
+    }
+    foreach ( $wpdb->get_results( $wpdb->prepare( "SELECT meta_id, post_id, meta_value FROM $wpdb->postmeta WHERE meta_value LIKE %s", $like ) ) as $row ) {
+        $wpdb->update( $wpdb->postmeta, [ 'meta_value' => str_replace( $bad, 'imp@impressionbeauty.com', $row->meta_value ) ], [ 'meta_id' => $row->meta_id ] );
+        clean_post_cache( $row->post_id );
+        $n++;
+    }
+    echo "  $bad replaced in $n place(s)\n";
+
+    return $ids;
+}
+
+// Eye Care + Hair Removal under Services (Face, Body, Eye, Hair, Mole), News → the News page.
+function impression_acf_migration_menu( $ids ) {
+    $menu_id = get_nav_menu_locations()['primary'] ?? 0;
+    if ( ! $menu_id ) {
+        echo "  !! no menu in the Primary location — add the pages in Appearance → Menus\n";
+        return;
+    }
+    $items   = wp_get_nav_menu_items( $menu_id );
+    $in_menu = [];
+    $parent  = 0;
+    foreach ( $items as $i ) {
+        if ( $i->object === 'page' ) {
+            $in_menu[] = (int) $i->object_id;
+            if ( (int) $i->object_id === (int) $ids['face-care'] ) {
+                $parent = (int) $i->menu_item_parent;
+            }
+        }
+    }
+    foreach ( [ 'eye-care' => 'Eye Care', 'hair-removal' => 'Hair Removal' ] as $slug => $label ) {
+        if ( ! in_array( (int) $ids[ $slug ], $in_menu, true ) ) {
+            wp_update_nav_menu_item( $menu_id, 0, [ 'menu-item-object-id' => $ids[ $slug ], 'menu-item-object' => 'page', 'menu-item-type' => 'post_type', 'menu-item-parent-id' => $parent, 'menu-item-status' => 'publish', 'menu-item-title' => $label ] );
+            echo "  added $label\n";
+        }
+    }
+
+    $news_done = false;
+    foreach ( $items as $i ) {
+        if ( ! (int) $i->menu_item_parent && html_entity_decode( $i->title ) === 'News' ) {
+            wp_update_nav_menu_item( $menu_id, $i->ID, [ 'menu-item-title' => 'News', 'menu-item-object-id' => $ids['news'], 'menu-item-object' => 'page', 'menu-item-type' => 'post_type', 'menu-item-status' => 'publish', 'menu-item-position' => $i->menu_order, 'menu-item-parent-id' => 0 ] );
+            echo "  News now opens the News page\n";
+            $news_done = true;
+        }
+    }
+    if ( ! $news_done ) {
+        echo "  !! no top-level News item found — add the News page in Appearance → Menus\n";
+    }
+
+    // Order: Face, Body, Eye, Hair, Mole under Services; everything else keeps its order.
+    if ( ! $parent ) {
+        return;
+    }
+    $want  = array_map( fn( $s ) => (int) $ids[ $s ], [ 'face-care', 'body-care', 'eye-care', 'hair-removal', 'mole-warts-removal' ] );
+    $items = wp_get_nav_menu_items( $menu_id );
+    $kids  = array_filter( $items, fn( $i ) => (int) $i->menu_item_parent === $parent );
+    $pos   = function ( $i ) use ( $want ) {
+        $at = array_search( (int) $i->object_id, $want, true );
+        return $at === false ? 99 : $at;
+    };
+    usort( $kids, fn( $a, $b ) => $pos( $a ) <=> $pos( $b ) );
+    $order = 1;
+    foreach ( $items as $i ) {
+        if ( (int) $i->menu_item_parent === $parent ) {
+            continue;
+        }
+        wp_update_post( [ 'ID' => $i->ID, 'menu_order' => $order++ ] );
+        if ( (int) $i->ID === $parent ) {
+            foreach ( $kids as $k ) {
+                wp_update_post( [ 'ID' => $k->ID, 'menu_order' => $order++ ] );
+            }
+        }
+    }
+    echo "  Services order: Face, Body, Eye, Hair, Mole\n";
 }

@@ -53,7 +53,8 @@ $news_intro   = get_field('home_news_intro');
         <?php endif; ?>
 
         <div class="text-center mt-5">
-            <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts')) ?: home_url('/news')); ?>" class="btn-beauty">View All News</a>
+            <?php $news_page = get_page_by_path('news'); ?>
+            <a href="<?php echo esc_url($news_page ? get_permalink($news_page) : home_url('/')); ?>" class="btn-beauty">View All News</a>
         </div>
 
     </div>

@@ -1674,7 +1674,7 @@ footer ul li a:hover {
 }
 
 .faq-body {
-    padding: 0 22px 20px;
+    padding: 23px 22px 20px;
     color: var(--text-secondary);
     font-size: 0.93rem;
     line-height: 1.8;
@@ -2362,4 +2362,92 @@ textarea.contact-input {
         width: 52px;
         height: 52px;
     }
+}
+
+/* ──────────────────────────────────────────────
+   Service page: details sections
+   ────────────────────────────────────────────── */
+.service-section + .service-section {
+    padding-top: 0 !important;
+}
+
+.service-section .page-content ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.service-items-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-align: center;
+    margin: 2.5rem 0 0.5rem;
+}
+
+.service-section .feature-card img {
+    height: 220px;
+}
+
+.service-gallery-item {
+    margin: 0;
+    text-align: center;
+}
+
+.service-gallery-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.service-gallery-item figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* ──────────────────────────────────────────────
+   Promotion page
+   ────────────────────────────────────────────── */
+.promo-price {
+    display: inline-block;
+    margin: 0.5rem 0 1rem;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+}
+
+.promo-terms {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.promo-terms ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Enquiry forms: hidden spam-trap field */
+.enquiry-trap {
+    position: absolute;
+    left: -9999px;
+}
+
+/* News list pagination */
+.news-pagination .page-numbers {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    margin: 0 0.15rem;
+    border-radius: 999px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.news-pagination .page-numbers.current {
+    background: var(--primary);
+    color: #fff;
 }

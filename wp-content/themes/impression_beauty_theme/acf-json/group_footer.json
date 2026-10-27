@@ -1,0 +1,98 @@
+{
+    "key": "group_footer",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_footer_columns_tab",
+            "label": "Columns",
+            "name": "",
+            "type": "tab",
+            "instructions": "The link columns next to the logo. Drag rows to change the order."
+        },
+        {
+            "key": "field_footer_columns",
+            "label": "Columns",
+            "name": "footer_columns",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a column",
+            "sub_fields": [
+                {
+                    "key": "field_footer_column_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_footer_column_links",
+                    "label": "Links",
+                    "name": "links",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Add a link",
+                    "instructions": "Pick a page, or type a web address. A link with neither is hidden.",
+                    "sub_fields": [
+                        {
+                            "key": "field_footer_link_label",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_footer_link_page",
+                            "label": "Page",
+                            "name": "page",
+                            "type": "page_link",
+                            "post_type": [
+                                "page"
+                            ],
+                            "allow_null": 1
+                        },
+                        {
+                            "key": "field_footer_link_url",
+                            "label": "Or web address",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "e.g. https://instagram.com/… or mailto:name@example.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_footer_contact_tab",
+            "label": "Contact",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_footer_enquiry_email",
+            "label": "Enquiry email",
+            "name": "footer_enquiry_email",
+            "type": "email",
+            "instructions": "Where the Contact page and service page forms are sent."
+        },
+        {
+            "key": "field_footer_whatsapp_number",
+            "label": "WhatsApp number",
+            "name": "footer_whatsapp_number",
+            "type": "text",
+            "instructions": "Used by the floating WhatsApp button. Digits only, with country code, e.g. 6580102500."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "footer-settings"
+            }
+        ]
+    ],
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1793108485
+}

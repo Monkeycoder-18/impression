@@ -123,7 +123,8 @@
                             <p class="text-muted" style="font-size:.88rem;line-height:1.75;">
                                 Singapore's trusted destination for natural face &amp; body care treatments at Clarke Quay Central.
                             </p>
-                            <a href="<?php echo esc_url( home_url( '/contact-us' ) ); ?>"
+                            <?php $contact_page = get_page_by_path( 'contact-us' ); ?>
+                            <a href="<?php echo esc_url( $contact_page ? get_permalink( $contact_page ) : home_url( '/' ) ); ?>"
                                class="btn btn-beauty w-100 mt-2">
                                 Book Now
                             </a>
@@ -158,7 +159,8 @@
                             <p style="font-size:.85rem;opacity:.85;margin-bottom:1rem;">
                                 First-time trial promotions available. Enjoy exclusive discounts on selected treatments.
                             </p>
-                            <a href="<?php echo esc_url( home_url( '/news-promotion' ) ); ?>"
+                            <?php $promo_page = get_page_by_path( 'promotions' ); ?>
+                            <a href="<?php echo esc_url( $promo_page ? get_permalink( $promo_page ) : home_url( '/' ) ); ?>"
                                class="btn btn-light btn-sm rounded-pill"
                                style="color:var(--primary);">
                                 View Promotions

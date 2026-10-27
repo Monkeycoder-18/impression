@@ -133,7 +133,7 @@ $visit_link   = get_field( 'contact_visit_button_link' );
                             <div class="contact-detail-text">
                                 <h6>Email Us</h6>
                                 <p>
-                                    <a href="mailto:imp@impressionbeauty.com.sg" class="contact-info-tel">
+                                    <a href="mailto:imp@impressionbeauty.com" class="contact-info-tel">
                                         imp@impressionbeauty.com
                                     </a>
                                 </p>
@@ -168,16 +168,11 @@ $visit_link   = get_field( 'contact_visit_button_link' );
 
             <!-- FORM -->
             <div class="col-lg-7">
-                <div class="contact-form-wrap">
-                    <?php
-                    if ( shortcode_exists( 'contact-form-7' ) ) :
-                        echo do_shortcode( '[contact-form-7 id="5" title="Contact form 1"]' );
-                    else :
-                    ?>
+                <div class="contact-form-wrap" id="contact-form">
+                        <?php impression_enquiry_notice(); ?>
                         <form class="contact-native-form" method="post"
                             action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
-                            <?php wp_nonce_field( 'impression_contact', 'impression_contact_nonce' ); ?>
-                            <input type="hidden" name="action" value="impression_contact_form">
+                            <?php impression_enquiry_hidden_fields( 'contact-form' ); ?>
 
                             <div class="row g-3">
                                 <div class="col-sm-6">
@@ -199,12 +194,12 @@ $visit_link   = get_field( 'contact_visit_button_link' );
                                     <label class="contact-label">Treatment of Interest</label>
                                     <select name="contact_treatment" class="contact-input form-select">
                                         <option value="">Select a treatment…</option>
-                                        <option value="face-care">Face Care</option>
-                                        <option value="body-care">Body Care</option>
-                                        <option value="eye-care">Eye Care</option>
-                                        <option value="hair-removal">Hair Removal</option>
-                                        <option value="mole-wart-removal">Mole &amp; Wart Removal</option>
-                                        <option value="other">Other / Not Sure</option>
+                                        <option>Face Care</option>
+                                        <option>Body Care</option>
+                                        <option>Eye Care</option>
+                                        <option>Hair Removal</option>
+                                        <option>Mole &amp; Wart Removal</option>
+                                        <option>Other / Not Sure</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -220,7 +215,6 @@ $visit_link   = get_field( 'contact_visit_button_link' );
                                 </div>
                             </div>
                         </form>
-                    <?php endif; ?>
 
                 </div>
             </div>

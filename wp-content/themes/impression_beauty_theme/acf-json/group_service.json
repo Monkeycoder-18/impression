@@ -123,14 +123,18 @@
             "label": "Paragraph 1",
             "name": "service_intro_paragraph_1",
             "type": "textarea",
-            "rows": 4
+            "rows": 4,
+            "instructions": "Leave a blank line between paragraphs to add more than one."
         },
         {
             "key": "field_service_intro_paragraph_2",
-            "label": "Paragraph 2",
+            "label": "More text",
             "name": "service_intro_paragraph_2",
-            "type": "textarea",
-            "rows": 4
+            "type": "wysiwyg",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "instructions": "Optional. More paragraphs or a bullet list."
         },
         {
             "key": "field_service_intro_checks",
@@ -149,11 +153,107 @@
             ]
         },
         {
+            "key": "field_service_sections_tab",
+            "label": "Details",
+            "name": "",
+            "type": "tab",
+            "instructions": "The main content of the page, one block per topic (e.g. \"Treatments for Oily Skin\"). Each block can have text, a photo, before/after photos and cards."
+        },
+        {
+            "key": "field_service_sections",
+            "label": "Sections",
+            "name": "service_sections",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add a section",
+            "sub_fields": [
+                {
+                    "key": "field_service_section_heading",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_section_body",
+                    "label": "Text",
+                    "name": "body",
+                    "type": "wysiwyg",
+                    "tabs": "visual",
+                    "toolbar": "basic",
+                    "media_upload": 0
+                },
+                {
+                    "key": "field_service_section_image",
+                    "label": "Photo",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "instructions": "Optional. Shown beside the text."
+                },
+                {
+                    "key": "field_service_section_gallery",
+                    "label": "Before / after photos",
+                    "name": "gallery",
+                    "type": "gallery",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "instructions": "Optional. Each photo shows its caption underneath (set the caption in the media library)."
+                },
+                {
+                    "key": "field_service_section_items_heading",
+                    "label": "Cards heading",
+                    "name": "items_heading",
+                    "type": "text",
+                    "instructions": "Optional, e.g. \"Recommended Treatments\"."
+                },
+                {
+                    "key": "field_service_section_items",
+                    "label": "Cards",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "block",
+                    "button_label": "Add a card",
+                    "instructions": "Optional. Treatments (with duration) or other short items.",
+                    "sub_fields": [
+                        {
+                            "key": "field_service_section_item_image",
+                            "label": "Photo",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array",
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_service_section_item_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_service_section_item_meta",
+                            "label": "Duration",
+                            "name": "meta",
+                            "type": "text",
+                            "instructions": "Optional, e.g. \"90 mins\"."
+                        },
+                        {
+                            "key": "field_service_section_item_text",
+                            "label": "Description",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "field_service_audience_tab",
             "label": "Who is this for",
             "name": "",
             "type": "tab",
-            "instructions": "The three concern / skin-type cards."
+            "instructions": "Optional concern / skin-type cards. Leave empty to hide the section."
         },
         {
             "key": "field_service_audience_heading",
@@ -202,7 +302,7 @@
             "label": "Treatments",
             "name": "",
             "type": "tab",
-            "instructions": "The recommended treatments grid."
+            "instructions": "Optional treatments grid. Leave empty to hide the section (treatments can also go in Details)."
         },
         {
             "key": "field_service_treatments_heading",
